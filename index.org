@@ -1,0 +1,478 @@
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: file:/home/bryan/projects/aspen-displays
+#+REVEAL_THEME: aspen-red
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND: ./images/aspen-background.png
+#+REVEAL_HLEVEL: 1
+#+REVEAL_PLUGINS: (markdown notes)
+#+OPTIONS: timestamp:nil toc:0 num:nil export-format:html5 
+#+REVEAL_DEFAULT_FRAG_STYLE: fade-left
+:END:
+
+#+TITLE: ASPEN BROWSE CATEGORIES AS DIGITAL SIGNAGE 
+#+SUBTITLE: AspenCon 2024
+#+AUTHOR: Bryan Neil Jones
+#+DATE: <2024-03-13 Wed>
+
+* aspen browse categories as digital signage 
+#+BEGIN_NOTES
+Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends. 
+
+First, I want to thank everyone that helped put AspenCon together. Organizing and running a convention is a huge lift and appreciate the work everyone has done to make this happen. 
+
+Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.
+#+END_NOTES
+#+BEGIN_SRC html
+AspenCon 2024
+Bryan Neil Jones
+Nashville Public Library
+#+END_SRC
+** The Problem
+ #+BEGIN_NOTES
+- An administrator that no longer works at NPL, subverted protocol and made a business relationship local avertising company. Because our normal procedures for on boarding a new technology wasn't followed, chaos ensured.
+- This advertising company made their own software for us. They also gave us access to their servers.
+- When meant we could, if wanted, try to troubleshoot it problems, if say for instance they were not responding to trouble tickets. 
+
+In short their software stack was fragile and whose responsibility it was to fix it was nebulous.  
+ #+END_NOTES
+ #+ATTR_REVEAL: :frag (t)
+ - Aloof administrators    
+ - Janky software
+ - Broken workflows
+** [[./images/display-1.jpeg]]
+#+BEGIN_NOTES
+What we would often end up with was this.
+
+Here's what one of the screens looks like an a standard issue book cart. 
+
+Notice the reflect of the strikingly handsome systems librarian reflected in the glass.
+#+END_NOTES
+** The Solution
+#+BEGIN_NOTES
+Aspen!
+
+Specifically, Browse Categories
+#+END_NOTES
+#+ATTR_REVEAL: :frag (t)
+- Aspen!
+- Specifically, Browse Categories
+** [[./images/displays-2.jpg]] 
+#+BEGIN_NOTES
+This is what they look like now, embedded in the wall. This is directly across from our circulation desk at the Madison Branch.
+
+What you see here are Browse Categories created from staff Lists. They rotate automatically on their own to the next Browse Category after 20 seconds. Staff have autonomy to create their own Categories from Lists or Searches. Staff a branches have granular permissions on update the screens at their locations.
+
+So did we get here?
+#+END_NOTES
+* First Steps
+#+BEGIN_NOTES
+The custom CMS had kiosk-like features that would launch the software in fullscreen mode and lock the touchscreen. We needed to find a replacement. Ultimately, we went with Kioware (https://www.kioware.com/) as this satisfied the security concerns of our IT department and we were already using it on our OPACs. Depending on your circumstances, Firefox in kiosk mode (https://support.mozilla.org/en-US/kb/firefox-enterprise-kiosk-mode) could be a great free alternative.
+
+Staff at affected branches were accustomed to creating content specific to their branch. To achieve feature parity with the old software with Aspen, we created a dummy location and a Browse Category Group for each such Location; e.g., the Maplewood branch got a Location called Maplewood-Display and Browse Category Group also called Maplewood-Display.	
+#+END_NOTES
+#+ATTR_REVEAL: :frag (t) 
+- Full screen, locked down
+- [[https://www.kioware.com/][Kioware]]
+- alternative: [[https://support.mozilla.org/en-US/kb/firefox-enterprise-kiosk-mode][Firefox kiosk mode]]
+** first steps 			 
+ #+ATTR_REVEAL: :frag (t)
+- Q: How scope content to a specific branch?
+- A: Dummy locations for each piece of hardware
+ #+BEGIN_NOTES
+
+ #+END_NOTES
+** 
+[[./images/display-locations.png]]
+ #+BEGIN_NOTES
+
+ #+END_NOTES
+** first steps 			 
+ #+ATTR_REVEAL: :frag (t)
+- Q: How scope content to a specific branch?
+- A: Browse Category Groups for each dummy location
+ #+BEGIN_NOTES
+
+ #+END_NOTES
+** 
+[[./images/browse-category-groups.png]]
+ #+BEGIN_NOTES
+
+ #+END_NOTES
+
+* Custom Theme + Custom CSS 
+#+ATTR_REVEAL: :frag (t)
+- Q: How to make it look great?
+- A: Jenny Ellis' beautiful, dark [[https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU][theme]]
+#+BEGIN_NOTES
+
+#+END_NOTES
+** Custom Theme + Custom CSS 
+#+ATTR_REVEAL: :frag (t)
+- Eliminates: scroll bar, mouse, arrows, alert bar
+- Eliminates: language selector, search bar, logo
+- Sets the correct number of rows
+#+BEGIN_NOTES
+
+#+END_NOTES
+** Remove Mouse 
+#+BEGIN_SRC css :export code
+		/* ================= GET RID OF POINTER ================= */
+
+		#content-container {  
+		 pointer-events: none;  
+		}
+#+END_SRC
+#+BEGIN_NOTES
+
+ #+END_NOTES
+** Hide Scrollbar   
+#+BEGIN_SRC css :export code 
+		/* ================= HIDE SCROLLBAR ================= */
+
+		body {
+		overflow-y: hidden
+		}
+#+END_SRC
+#+BEGIN_NOTES
+
+ #+END_NOTES
+** Hide bottom row of covers 
+#+BEGIN_SRC css :export code
+                /* ================= HIDE BOTTOM ROW OF COVERS ================= */
+		/* Hides all covers after the 4th row, so the 5th row of covers and all that follow */
+		#home-page-browse-results .browse-thumbnail:nth-of-type(1n+17) {
+			 display: none;
+		}
+#+END_SRC
+#+BEGIN_NOTES
+
+ #+END_NOTES
+** All of it
+#+BEGIN_SRC css :export code
+/* ================= GET RID OF POINTER ================= */
+
+#content-container {  
+ pointer-events: none;  
+}
+
+/* ================= HIDE SCROLLBAR ================= */
+
+body {
+overflow-y: hidden
+}
+
+/* ================= HIDE BOTTOM ROW OF COVERS ================= */
+
+/* Hides all covers after the 4th row, so the 5th row of covers and all that follow */
+
+#home-page-browse-results .browse-thumbnail:nth-of-type(1n+17) {
+         display: none;
+}
+
+/* ================= HIDE THE ARROWS ON BROWSE CATEGORIES ================= */
+
+#browse-category-picker .jcarousel-control-prev, #browse-category-picker .jcarousel-control-next {
+         background-color: #000;
+         color: #000;
+         font-size: 0px;
+         display: none;
+}
+
+.jcarousel-control-prev, .jcarousel-control-next {
+         text-shadow: 0 0 0px #000;
+         box-shadow: 0px 0px 0px #000;
+}
+
+.col-sm-12, .col-md-12, .col-lg-12 {
+         position: relative;
+         min-height: 1px;
+         padding-left: 15px;
+         padding-right: 15px;
+}
+
+/* ================= HIDE THE ALERT BAR ================= */
+
+div#system-message-header {
+         display: none;
+}
+
+/* ================= HIDE LANGUAGE SELECTOR ================= */
+
+#language-selection-header {
+         display: none;
+}
+
+/* ================= HIDE THE MENU ================= */
+
+div#horizontal-menu-bar-wrapper {
+         display: none;
+}
+
+/* ================= HIDE THE SEARCH CONTAINER ================= */
+
+div#horizontal-search-container {
+         display: none;
+}
+
+/* ================= HIDE THE LOGO / BRANDING ================= */
+
+div#header-logo-container {
+         display: none;
+}
+
+/* ================= HIDE THE PAGE TITLE ================= */
+
+div#headerTextDiv {
+         display: none; 
+}
+
+/* ================= HIDE THE FOOTER ================= */
+
+div#footer-container {
+         display: none;
+}
+
+/* ================= STYLE THE PAGE ================= */
+
+body {
+         background-color: #000;
+}
+
+body .container, #home-page-browse-content {
+         background-color: #000000;
+         color: #000000;
+}
+
+#home-page-browse-content {
+         background-color: #000;
+padding: 0;
+}
+
+
+#header-wrapper {
+         background-color: black;
+}
+
+#home-page-browse-header {
+         background-color: #000000;
+margin-bottom: 25px;
+}
+
+#selected-browse-label {
+         background-color: #000000;
+}
+
+#browse-sub-category-menu button.selected, #browse-sub-category-menu button.selected:hover {
+         border-color: #0087AB !important;
+         background-color: #97c6d3 !important;
+         color: #ffffff !important;
+}
+
+.btn-toolbar.pull-right {
+         display: none;
+}
+
+a#selected-browse-search-link {
+         color: #fff;
+}
+
+div#more-browse-results {
+         display: none;
+}
+
+#more-browse-results {
+         background-color: #000;
+}
+
+.glyphicon-chevron-down:before {
+         color: black;
+}
+
+a#js-top {
+         display: none!important;
+}
+
+/* ================= BROWSE CATEGORY STYLES ================= */
+
+.browse-category {
+         font-size: 25px;
+background-color: #000000 !important;
+}
+
+.browse-category div:hover {
+         text-decoration: none;
+}
+
+.browse-category.selected {
+         font-size: 25px;
+}
+
+.jcarousel li {
+         border: 3px solid #fff;
+}
+
+div#selected-browse-label {
+         display: none;
+}
+
+/* ================= Covers ================= */
+
+.browse-thumbnail {
+         background-color: #000;
+margin-bottom: 50px
+}
+
+.browse-thumbnail img {
+                         box-shadow: 5px 5px 0px #ccc;
+border: 1px solid #707070;
+}
+#+END_SRC
+#+BEGIN_NOTES
+
+ #+END_NOTES
+* Custom Javascript
+#+ATTR_REVEAL: :frag (t)
+- Q: How to make Browse Categories automatically move 
+- A: James Staub's [[https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU][custom JavaScript]]
+#+BEGIN_NOTES
+The old software displayed covers as an animated scroll. We had to figure out a way for the Browse Categories move on their own. James Staub, our senior systems librarian, wrote a JavaScript snippet to automate the rotation of Browse Categories. The snippet causes the current Category to advance to the next Category after twenty seconds and refresh the page after reaching the last Category in the Group. The last part is very important because this is what enables staff to make changes from their workstations without have to touch the hardware itself which is difficult to access. When the page refreshes, their changes appear. The snippet: 
+#+END_NOTES
+** Custom JavaScript
+#+ATTR_REVEAL: :frag (t)
+- Move to next Category after X seconds
+#+BEGIN_SRC javascript :export code
+<script>
+
+if (location.pathname == '/') {
+	var reloadURL = window.location.href;
+	var rotateTime = 20000;
+	var rotateCount = 0;
+	function rotateCategory() {
+		var bccount = $('.jcarousel').jcarousel('items').length;
+		var nextCategory = null;		
+		nextCategory = $('[data-category-id='+AspenDiscovery.Browse.curCategory+']').next().attr('data-category-id');
+		if (!nextCategory || rotateCount >= bccount - 1 ) { 
+			window.location.href = reloadURL;
+		}
+		rotateCount++;
+		AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
+	}
+	
+	setTimeout(
+		function waitForIt(){
+			if(typeof AspenDiscovery.Browse.curCategory !== "undefined"){
+				setInterval(rotateCategory,rotateTime)
+			}else{
+				setTimeout(waitForIt,250)
+			}
+		},750);
+}
+
+</script>
+#+END_SRC
+** Custom Javascript
+#+ATTR_REVEAL: :frag (t)
+- Refresh when getting the last Category
+#+BEGIN_SRC javascript :export code
+<script>
+
+if (location.pathname == '/') {
+	var reloadURL = window.location.href;
+	var rotateTime = 20000;
+	var rotateCount = 0;
+	function rotateCategory() {
+		var bccount = $('.jcarousel').jcarousel('items').length;
+		var nextCategory = null;		
+		nextCategory = $('[data-category-id='+AspenDiscovery.Browse.curCategory+']').next().attr('data-category-id');
+		if (!nextCategory || rotateCount >= bccount - 1 ) { 
+			window.location.href = reloadURL;
+		}
+		rotateCount++;
+		AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
+	}
+	
+	setTimeout(
+		function waitForIt(){
+			if(typeof AspenDiscovery.Browse.curCategory !== "undefined"){
+				setInterval(rotateCategory,rotateTime)
+			}else{
+				setTimeout(waitForIt,250)
+			}
+		},750);
+}
+</script>
+#+END_SRC
+** Custom JavaScript
+#+ATTR_REVEAL: :frag (t)
+#+BEGIN_SRC javascript :export code
+<script>
+
+if (location.pathname == '/') {
+	var reloadURL = window.location.href;
+	var rotateTime = 20000;
+	var rotateCount = 0;
+	function rotateCategory() {
+		var bccount = $('.jcarousel').jcarousel('items').length;
+		var nextCategory = null;		
+		nextCategory = $('[data-category-id='+AspenDiscovery.Browse.curCategory+']').next().attr('data-category-id');
+		if (!nextCategory || rotateCount >= bccount - 1 ) { 
+			window.location.href = reloadURL;
+		}
+		rotateCount++;
+		AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
+	}
+	
+	setTimeout(
+		function waitForIt(){
+			if(typeof AspenDiscovery.Browse.curCategory !== "undefined"){
+				setInterval(rotateCategory,rotateTime)
+			}else{
+				setTimeout(waitForIt,250)
+			}
+		},750);
+}
+</script>
+#+END_SRC
+* Granular Permissions
+#+ATTR_REVEAL: :frag (t)
+[[./images/granular-permissions.png]]
+#+BEGIN_NOTES
+We have a lot of Browse Categories at our library (probably too many). The Collections & Technology team manages the system-wide Browse Category Groups centrally and we didn't want anyone moving our stapler. With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. Maplewood Librarian can be given permissions to edit only the Maplewood-Display Browse Category Group. No one moves our stapler.    
+#+END_NOTES
+* Staff Training
+#+ATTR_REVEAL: :frag (t) 
+- Staff had never heard the term 'Browse Category' before
+- PDF instuction, video calls
+- Positives and negatives 
+ #+BEGIN_NOTES
+ The staff who were creating content with old system didn't know about Aspen Browse Categories. I created a document that walked them through the process of creating Browse Categories. I also made myself available for video calls for any interested parties. The first link on the training document was the Aspen Help Center. The documentation in the Aspen Help Center was a boon to both me and the staff who are the folks actually creating content. 
+ #+END_NOTES
+* Future Steps
+#+ATTR_REVEAL: :frag (t) 
+- Info boxes
+- Patron navigation
+- Randomized covers
+- Web Builder (not Browse Categories)
+#+BEGIN_NOTES
+Our next step is determining if we want the displays to be interactive. With the old software you could tap a title to bring up an info box about the title. Again, the info displayed was pulled from Aspen. If we decide that is an important feature, we then have to determine if it is something we can make happen in house, or if we'll need help from our colleagues at ByWater or a third party developer. The future is unwritten. If you want to checkout the current display Browse Categories, you can visit the URLs of the dummy locations. Veiwing them in fullscreen mode on a large-ish portrait monitor will give you the idea of what they look like on IRL. 
+#+END_NOTES
+* All the Things
+#+ATTR_REVEAL: :frag (t) 
+#+BEGIN_NOTES
+
+#+END_NOTES
+- [[https://bld.library.nashville.org][Bellevue branch]]
+- [[https://bxd.library.nashville.org][Bordeux branch]]
+- [[https://epd.library.nashville.org][Edmondson Pike branch]]
+- [[https://mad.library.nashville.org][Madison branch one]]
+- [[https://mad2.library.nashville.org][Madison branch two]]
+- [[https://sed.library.nashville.org][Southeast branch]]
+- [[https://wpd.library.nashville.org][Watkins Park branch]]
+* Takeaways
+#+ATTR_REVEAL: :frag (t) 
+#+BEGIN_NOTES
+
+#+END_NOTES
+- Follow procedures
+- Know thyself, respect others
+- Learn to code*
+
