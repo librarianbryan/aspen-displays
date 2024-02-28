@@ -1,16 +1,13 @@
 :REVEAL_PROPERTIES:
-#+REVEAL_THEME: aspen-red
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND: ./images/aspen-background.png
+#+REVEAL_TITLE_SLIDE_BACKGROUND: ./images/aspen-background.png
+#+REVEAL_THEME: aspen-red
 #+REVEAL_HLEVEL: 1
 #+REVEAL_PLUGINS: (markdown notes)
-#+OPTIONS: timestamp:nil toc:0 num:nil export-format:html5 
 #+REVEAL_DEFAULT_FRAG_STYLE: fade-left
+#+OPTIONS: timestamp:nil toc:0 num:nil
+#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories As Digital Signage</h2></br><h3>AspenCon 2023</h3><h6>Bryan Neil Jones</h6><h6>Nashville Public Library</h6>
 :END:
-
-#+TITLE: ASPEN BROWSE CATEGORIES AS DIGITAL SIGNAGE 
-#+SUBTITLE: AspenCon 2024
-#+AUTHOR: Bryan Neil Jones
-#+DATE: <2024-03-13 Wed>
 
 * aspen browse categories as digital signage 
 #+BEGIN_NOTES
@@ -454,18 +451,6 @@ We have a lot of Browse Categories at our library (probably too many). The Colle
 #+BEGIN_NOTES
 Our next step is determining if we want the displays to be interactive. With the old software you could tap a title to bring up an info box about the title. Again, the info displayed was pulled from Aspen. If we decide that is an important feature, we then have to determine if it is something we can make happen in house, or if we'll need help from our colleagues at ByWater or a third party developer. The future is unwritten. If you want to checkout the current display Browse Categories, you can visit the URLs of the dummy locations. Veiwing them in fullscreen mode on a large-ish portrait monitor will give you the idea of what they look like on IRL. 
 #+END_NOTES
-* All the Things
-#+ATTR_REVEAL: :frag (t) 
-#+BEGIN_NOTES
-
-#+END_NOTES
-- [[https://bld.library.nashville.org][Bellevue branch]]
-- [[https://bxd.library.nashville.org][Bordeux branch]]
-- [[https://epd.library.nashville.org][Edmondson Pike branch]]
-- [[https://mad.library.nashville.org][Madison branch one]]
-- [[https://mad2.library.nashville.org][Madison branch two]]
-- [[https://sed.library.nashville.org][Southeast branch]]
-- [[https://wpd.library.nashville.org][Watkins Park branch]]
 * Takeaways
 #+ATTR_REVEAL: :frag (t) 
 #+BEGIN_NOTES
@@ -474,4 +459,17 @@ Our next step is determining if we want the displays to be interactive. With the
 - Follow procedures
 - Know thyself, respect others
 - Learn to code*
+- Invest in a test server
+  
+* All the Things
+#+ATTR_REVEAL: :frag (t) 
+- [[https://bld.library.nashville.org][Bellevue branch]]
+- [[https://bxd.library.nashville.org][Bordeux branch]]
+- [[https://epd.library.nashville.org][Edmondson Pike branch]]
+- [[https://mad.library.nashville.org][Madison branch (screen one)]]
+- [[https://mad2.library.nashville.org][Madison branch (screen two)]]
+- [[https://sed.library.nashville.org][Southeast branch]]
+- [[https://wpd.library.nashville.org][Watkins Park branch]]
+#+BEGIN_NOTES
 
+#+END_NOTES  
