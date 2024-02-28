@@ -1,5 +1,4 @@
 :REVEAL_PROPERTIES:
-#+REVEAL_ROOT: file:/home/bryan/projects/aspen-displays
 #+REVEAL_THEME: aspen-red
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND: ./images/aspen-background.png
 #+REVEAL_HLEVEL: 1
