@@ -6,7 +6,7 @@
 #+REVEAL_PLUGINS: (markdown notes)
 #+REVEAL_DEFAULT_FRAG_STYLE: fade-left
 #+OPTIONS: timestamp:nil toc:0 num:nil
-#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories As Digital Signage</h2></br><h3>AspenCon 2023</h3><h6>Bryan Neil Jones</h6><h6>Nashville Public Library</h6>
+#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories As Digital Signage</h2></br><h6>AspenCon 2023</h6>Bryan Neil Jones</br>Nashville Public Library
 :END:
 
 * aspen browse categories as digital signage 
