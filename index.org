@@ -110,6 +110,7 @@ Staff at affected branches were accustomed to creating content specific to their
 
 #+END_NOTES
 ** Remove Mouse 
+#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
 		/* ================= GET RID OF POINTER ================= */
 
@@ -121,6 +122,7 @@ Staff at affected branches were accustomed to creating content specific to their
 
  #+END_NOTES
 ** Hide Scrollbar   
+#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code 
 		/* ================= HIDE SCROLLBAR ================= */
 
@@ -132,6 +134,7 @@ Staff at affected branches were accustomed to creating content specific to their
 
  #+END_NOTES
 ** Hide bottom row of covers 
+#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
                 /* ================= HIDE BOTTOM ROW OF COVERS ================= */
 		/* Hides all covers after the 4th row, so the 5th row of covers and all that follow */
@@ -143,6 +146,7 @@ Staff at affected branches were accustomed to creating content specific to their
 
  #+END_NOTES
 ** All of it
+#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
 /* ================= GET RID OF POINTER ================= */
 
@@ -453,16 +457,14 @@ Our next step is determining if we want the displays to be interactive. With the
 #+END_NOTES
 * Takeaways
 #+ATTR_REVEAL: :frag (t) 
-#+BEGIN_NOTES
-
-#+END_NOTES
 - Follow procedures
 - Know thyself, respect others
 - Learn to code*
 - Invest in a test server
-  
-* All the Things
-#+ATTR_REVEAL: :frag (t) 
+#+BEGIN_NOTES
+
+#+END_NOTES
+* All the Things 
 - [[https://bld.library.nashville.org][Bellevue branch]]
 - [[https://bxd.library.nashville.org][Bordeux branch]]
 - [[https://epd.library.nashville.org][Edmondson Pike branch]]
