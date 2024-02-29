@@ -466,7 +466,7 @@ Our next step is determining if we want the displays to be interactive. With the
 #+END_NOTES
 * All the Things 
 - [[https://bld.library.nashville.org][Bellevue branch]]
-- [[https://bxd.library.nashville.org][Bordeux branch]]
+- [[https://bxd.library.nashville.org][Bordeaux branch]]
 - [[https://epd.library.nashville.org][Edmondson Pike branch]]
 - [[https://mad.library.nashville.org][Madison branch (screen one)]]
 - [[https://mad2.library.nashville.org][Madison branch (screen two)]]
