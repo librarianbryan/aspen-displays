@@ -6,10 +6,16 @@
 #+REVEAL_PLUGINS: (markdown notes)
 #+REVEAL_DEFAULT_FRAG_STYLE: fade-left
 #+OPTIONS: timestamp:nil toc:0 num:nil
-#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories As Digital Signage</h2></br><h6>AspenCon 2023</h6>Bryan Neil Jones</br>Nashville Public Library
+#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories As Digital Signage</h2><b>AspenCon 2023</b></br><span style="font-size: 0.5em;">Bryan Neil Jones</br>Nashville Public Library</span><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends.</br>First, I want to thank everyone that helped put AspenCon together. Organizing and running a convention is a huge lift and appreciate the work everyone has done to make this happen.</br>Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.</aside>
+#+REVEAL_TITLE_SLIDE_NOTES: 'These are notes for the title slide'
 :END:
 
 * aspen browse categories as digital signage 
+#+BEGIN_SRC html
+AspenCon 2024
+Bryan Neil Jones
+Nashville Public Library
+#+END_SRC
 #+BEGIN_NOTES
 Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends. 
 
@@ -17,11 +23,6 @@ First, I want to thank everyone that helped put AspenCon together. Organizing an
 
 Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.
 #+END_NOTES
-#+BEGIN_SRC html
-AspenCon 2024
-Bryan Neil Jones
-Nashville Public Library
-#+END_SRC
 ** The Problem
  #+BEGIN_NOTES
 - An administrator that no longer works at NPL, subverted protocol and made a business relationship local avertising company. Because our normal procedures for on boarding a new technology wasn't followed, chaos ensured.
@@ -464,7 +465,7 @@ Our next step is determining if we want the displays to be interactive. With the
 #+BEGIN_NOTES
 
 #+END_NOTES
-* All the Things 
+* All the Things
 - [[https://bld.library.nashville.org][Bellevue branch]]
 - [[https://bxd.library.nashville.org][Bordeaux branch]]
 - [[https://epd.library.nashville.org][Edmondson Pike branch]]
