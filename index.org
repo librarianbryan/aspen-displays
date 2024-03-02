@@ -7,7 +7,6 @@
 #+REVEAL_DEFAULT_FRAG_STYLE: fade-left
 #+OPTIONS: timestamp:nil toc:0 num:nil
 #+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories As Digital Signage</h2><b>AspenCon 2023</b></br><span style="font-size: 0.5em;">Bryan Neil Jones</br>Nashville Public Library</span><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends.</br>First, I want to thank everyone that helped put AspenCon together. Organizing and running a convention is a huge lift and appreciate the work everyone has done to make this happen.</br>Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.</aside>
-#+REVEAL_TITLE_SLIDE_NOTES: 'These are notes for the title slide'
 :END:
 
 * aspen browse categories as digital signage 
@@ -337,9 +336,8 @@ border: 1px solid #707070;
 #+BEGIN_NOTES
 The old software displayed covers as an animated scroll. We had to figure out a way for the Browse Categories move on their own. James Staub, our senior systems librarian, wrote a JavaScript snippet to automate the rotation of Browse Categories. The snippet causes the current Category to advance to the next Category after twenty seconds and refresh the page after reaching the last Category in the Group. The last part is very important because this is what enables staff to make changes from their workstations without have to touch the hardware itself which is difficult to access. When the page refreshes, their changes appear. The snippet: 
 #+END_NOTES
-** Custom JavaScript
+** Move to next Category after X seconds
 #+ATTR_REVEAL: :frag (t)
-- Move to next Category after X seconds
 #+BEGIN_SRC javascript :export code
 <script>
 
@@ -370,9 +368,8 @@ if (location.pathname == '/') {
 
 </script>
 #+END_SRC
-** Custom Javascript
+** Refresh after the last Category
 #+ATTR_REVEAL: :frag (t)
-- Refresh when getting the last Category
 #+BEGIN_SRC javascript :export code
 <script>
 
@@ -402,7 +399,7 @@ if (location.pathname == '/') {
 }
 </script>
 #+END_SRC
-** Custom JavaScript
+** All of It
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
 <script>
