@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title></title>
-<meta name="author" content="Bryan Neil Jones"/>
+<meta name="author" content=""/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <style type="text/css">
@@ -19,9 +19,169 @@
 <div class="slides">
 <section id="sec-title-slide" data-background="./images/aspen-background.png"><h2>Aspen Browse Categories As Digital Signage</h2><b>AspenCon 2023</b><p style="line-height: 0.5em;"><span style="font-size: 0.5em;">Bryan Neil Jones<br>Nashville Public Library</span></p><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends.<br>First, I want to thank everyone that helped put AspenCon together. Organizing and running a convention is a huge lift and appreciate the work everyone has done to make this happen.<br>Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.<br>We had these maybe 34" all in computers embedded in walls and shelf ends.</aside>
 </section>
+
 <section>
-<section id="slide-org921df78" data-background="./images/aspen-background.png">
-<h2 id="org921df78">Custom Theme + Custom CSS</h2>
+<section id="slide-org527b188" data-background="./images/aspen-background.png">
+<h2 id="org527b188">The Problem</h2>
+<ul>
+<li class="fragment fade-left">Aloof administrators</li>
+<li class="fragment fade-left">Finicky software</li>
+<li class="fragment fade-left">Broken workflows</li>
+
+</ul>
+<aside class="notes">
+<ul>
+<li>An administrator that no longer works at NPL, subverted protocol and made a business relationship local avertising company. Because our normal procedures for on boarding a new technology wasn't followed, chaos ensured.</li>
+<li>This advertising company made their own CMS for us which pulled in data from Aspen; namely, staff lists . They also gave us access to their servers.</li>
+<li>This meant we could, if wanted, try to troubleshoot it problems, the adverstising company was not responding to trouble tickets. There was perpetual confusion as to who was responsible for what.</li>
+
+</ul>
+
+<p>
+In short, their software stack was fragile and whose responsibility it was to fix it was nebulous.  
+</p>
+
+</aside>
+</section>
+<section id="slide-orgc1220d0" data-background="./images/aspen-background.png">
+<h3 id="orgc1220d0"><img src="./images/display-1.jpeg" alt="display-1.jpeg" /></h3>
+<aside class="notes">
+<p>
+What we would often end up with was this. A screen with nothing on it.
+</p>
+
+<p>
+Here's what one of the screens looks like on a standard issue book cart. 
+</p>
+
+<p>
+Notice the reflection of the strikingly handsome systems librarian reflected in the glass.
+</p>
+
+</aside>
+</section>
+<section id="slide-org53c8f81" data-background="./images/aspen-background.png">
+<h3 id="org53c8f81">The Solution</h3>
+<aside class="notes">
+<p>
+Aspen!
+</p>
+
+<p>
+Specifically, Browse Categories
+</p>
+
+</aside>
+<ul>
+<li class="fragment fade-left">Aspen!</li>
+<li class="fragment fade-left">Specifically, Browse Categories</li>
+
+</ul>
+</section>
+<section id="slide-org6692c5d" data-background="./images/aspen-background.png">
+<h3 id="org6692c5d"><img src="./images/displays-2.jpg" alt="displays-2.jpg" /></h3>
+<aside class="notes">
+<p>
+This is what they look like now, embedded in the wall. This is directly across from our circulation desk at the Madison Branch.
+</p>
+<ul>
+<li>What you see here are Browse Categories created from staff Lists.</li>
+<li>They rotate automatically on their own to the next Browse Category after 20 seconds.</li>
+<li>Staff have autonomy to create their own Categories from Lists or Searches.</li>
+<li>Staff have granular permissions to only update only the screens at their locations.</li>
+<li>So did we get here?</li>
+
+</ul>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org0e1861f" data-background="./images/aspen-background.png">
+<h2 id="org0e1861f">First Steps</h2>
+<ul>
+<li class="fragment fade-left">Full screen, locked down</li>
+<li class="fragment fade-left"><a href="https://www.kioware.com/">Kioware</a></li>
+<li class="fragment fade-left">alternative: <a href="https://support.mozilla.org/en-US/kb/firefox-enterprise-kiosk-mode">Firefox kiosk mode</a></li>
+
+</ul>
+<aside class="notes">
+<p>
+The old software had kiosk-like features that would launch the software in fullscreen mode and lock the touchscreen. We needed to find a replacement. 
+</p>
+<ul>
+<li>Ultimately, we went with Kioware as this satisfied the security concerns of our IT department, and we were already using it on our OPACs.</li>
+<li>Depending on your circumstances, Firefox in kiosk mode could be a great free alternative.</li>
+
+</ul>
+
+</aside>
+</section>
+<section id="slide-orgc2778ee" data-background="./images/aspen-background.png">
+<h3 id="orgc2778ee">first steps</h3>
+<ul>
+<li class="fragment fade-left">Q: How to scope content to a specific branch?</li>
+<li class="fragment fade-left">A: Dummy locations for each piece of hardware</li>
+
+</ul>
+<aside class="notes">
+<p>
+Effected branches were accustomed to creating content specific to their branch. 
+</p>
+<ul>
+<li>To achieve feature parity, in Aspen we created a dummy location; e.g., the Madison branch got a Location called Madison-Display.</li>
+
+</ul>
+
+</aside>
+</section>
+<section id="slide-org92e58f1" data-background="./images/aspen-background.png">
+<h3 id="org92e58f1"></h3>
+
+<div id="org256fd80" class="figure">
+<p><img src="./images/display-locations.png" alt="display-locations.png" />
+</p>
+</div>
+<aside class="notes">
+<p>
+This is what it looks like in Aspen Admin GUI. In the Aspen Locations table there is a branch named 'Bellevue' but her u see the word '-Display' appended to it.
+</p>
+
+</aside>
+</section>
+<section id="slide-org98482f6" data-background="./images/aspen-background.png">
+<h3 id="org98482f6">first steps</h3>
+<ul>
+<li class="fragment fade-left">Q: How to scope content to a specific branch?</li>
+<li class="fragment fade-left">A: Browse Category Groups for each dummy location</li>
+
+</ul>
+<aside class="notes">
+<p>
+Each dummy branch location got its own Browse Category Group; e.g., the Madison-Display location is assigned a Browse Category Group called Madison-Display.
+</p>
+
+</aside>
+</section>
+<section id="slide-org822e803" data-background="./images/aspen-background.png">
+<h3 id="org822e803"></h3>
+
+<div id="orgc2d5c39" class="figure">
+<p><img src="./images/browse-category-groups.png" alt="browse-category-groups.png" />
+</p>
+</div>
+<aside class="notes">
+<p>
+This is what it looks like in Aspen Admin GUI.
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org4144192" data-background="./images/aspen-background.png">
+<h2 id="org4144192">Custom Theme + Custom CSS</h2>
 <ul>
 <li class="fragment fade-left">Q: How to make it look great?</li>
 <li class="fragment fade-left">A: Jenny Ellis' beautiful, dark <a href="https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU">theme</a></li>
@@ -34,8 +194,8 @@
 
 </aside>
 </section>
-<section id="slide-org2dd19ef" data-background="./images/aspen-background.png">
-<h3 id="org2dd19ef">Custom Theme + Custom CSS</h3>
+<section id="slide-org5625683" data-background="./images/aspen-background.png">
+<h3 id="org5625683">Custom Theme + Custom CSS</h3>
 <ul>
 <li class="fragment fade-left">Eliminates: arrows, mouse, alert bar, and scroll bar</li>
 <li class="fragment fade-left">Eliminates: language selector, search bar, logo</li>
@@ -52,236 +212,239 @@
 
 </aside>
 </section>
-<section id="slide-orgf7dc02a" data-background="./images/aspen-background.png">
-<h3 id="orgf7dc02a">Remove Mouse</h3>
+<section id="slide-orge120b3d" data-background="./images/aspen-background.png">
+<h3 id="orge120b3d">Remove Mouse</h3>
 <div class="org-src-container">
 
-<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= GET RID OF POINTER ================= </span><span style="color: #545c5e;">*/</span>
+<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= GET RID OF POINTER =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">#content-container </span>{  
+<span style="color: #80bcb6;">#content-container</span> {  
 <span style="color: #4d9391;">pointer-events</span>: none;  
 }
 </code></pre>
 </div>
 <aside class="notes">
-nil
+<p>
+It removes the mouse
+</p>
+
 </aside>
 </section>
-<section id="slide-org40f6cb3" data-background="./images/aspen-background.png">
-<h3 id="org40f6cb3">Hide Scrollbar</h3>
+<section id="slide-org2617b8a" data-background="./images/aspen-background.png">
+<h3 id="org2617b8a">Hide Scrollbar</h3>
 <div class="org-src-container">
 
-<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE SCROLLBAR ================= </span><span style="color: #545c5e;">*/</span>
+<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE SCROLLBAR =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">body </span>{
+<span style="color: #80bcb6;">body</span> {
 <span style="color: #4d9391;">overflow-y</span>: hidden
 }
 </code></pre>
 </div>
 <aside class="notes">
 <p>
-
+It removes the scroll bar
 </p>
 
 </aside>
 </section>
-<section id="slide-orgcff6ed2" data-background="./images/aspen-background.png">
-<h3 id="orgcff6ed2">Hide bottom row of covers</h3>
+<section id="slide-orga3b3405" data-background="./images/aspen-background.png">
+<h3 id="orga3b3405">Hide bottom row of covers</h3>
 <div class="org-src-container">
 
-<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE BOTTOM ROW OF COVERS ================= </span><span style="color: #545c5e;">*/</span>
+<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE BOTTOM ROW OF COVERS =================</span><span style="color: #545c5e;"> */</span>
 <span style="color: #545c5e;">/* </span><span style="color: #545c5e;">Hides all covers after the 4th row, </span>
-<span style="color: #545c5e;">so the 5th row of covers and all that follow </span><span style="color: #545c5e;">*/</span>
-<span style="color: #80bcb6;">#home-page-browse-results .browse-thumbnail:nth-of-type(1n+17) </span>{
+<span style="color: #545c5e;">so the 5th row of covers and all that follow</span><span style="color: #545c5e;"> */</span>
+<span style="color: #80bcb6;">#home-page-browse-results .browse-thumbnail:nth-of-type(1n+17)</span> {
         <span style="color: #4d9391;">display</span>: none;
         }
 </code></pre>
 </div>
 <aside class="notes">
 <p>
-
+It hides the bottom row of covers
 </p>
 
 </aside>
 </section>
-<section id="slide-orgc5d55a2" data-background="./images/aspen-background.png">
-<h3 id="orgc5d55a2">All of it</h3>
+<section id="slide-org1cdebbb" data-background="./images/aspen-background.png">
+<h3 id="org1cdebbb">All of it</h3>
 <div class="org-src-container">
 
-<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= GET RID OF POINTER ================= </span><span style="color: #545c5e;">*/</span>
+<pre  class="fragment (t)"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= GET RID OF POINTER =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">#content-container </span>{  
+<span style="color: #80bcb6;">#content-container</span> {  
  <span style="color: #4d9391;">pointer-events</span>: none;  
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE SCROLLBAR ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE SCROLLBAR =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">body </span>{
+<span style="color: #80bcb6;">body</span> {
 <span style="color: #4d9391;">overflow-y</span>: hidden
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE BOTTOM ROW OF COVERS ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE BOTTOM ROW OF COVERS =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">Hides all covers after the 4th row, so the 5th row of covers and all that follow </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">Hides all covers after the 4th row, so the 5th row of covers and all that follow</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">#home-page-browse-results .browse-thumbnail:nth-of-type(1n+17) </span>{
+<span style="color: #80bcb6;">#home-page-browse-results .browse-thumbnail:nth-of-type(1n+17)</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE ARROWS ON BROWSE CATEGORIES ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE ARROWS ON BROWSE CATEGORIES =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">#browse-category-picker .jcarousel-control-prev, #browse-category-picker .jcarousel-control-next </span>{
+<span style="color: #80bcb6;">#browse-category-picker .jcarousel-control-prev, #browse-category-picker .jcarousel-control-next</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000;">#000</span>;
          <span style="color: #4d9391;">color</span>: <span style="color: #ffffff; background-color: #000;">#000</span>;
          <span style="color: #4d9391;">font-size</span>: 0px;
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #80bcb6;">.jcarousel-control-prev, .jcarousel-control-next </span>{
+<span style="color: #80bcb6;">.jcarousel-control-prev, .jcarousel-control-next</span> {
          <span style="color: #4d9391;">text-shadow</span>: 0 0 0px <span style="color: #ffffff; background-color: #000;">#000</span>;
          <span style="color: #4d9391;">box-shadow</span>: 0px 0px 0px <span style="color: #ffffff; background-color: #000;">#000</span>;
 }
 
-<span style="color: #80bcb6;">.col-sm-12, .col-md-12, .col-lg-12 </span>{
+<span style="color: #80bcb6;">.col-sm-12, .col-md-12, .col-lg-12</span> {
          <span style="color: #4d9391;">position</span>: relative;
          <span style="color: #4d9391;">min-height</span>: 1px;
          <span style="color: #4d9391;">padding-left</span>: 15px;
          <span style="color: #4d9391;">padding-right</span>: 15px;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE ALERT BAR ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE ALERT BAR =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">div#system-message-header </span>{
+<span style="color: #80bcb6;">div#system-message-header</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE LANGUAGE SELECTOR ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE LANGUAGE SELECTOR =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">#language-selection-header </span>{
+<span style="color: #80bcb6;">#language-selection-header</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE MENU ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE MENU =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">div#horizontal-menu-bar-wrapper </span>{
+<span style="color: #80bcb6;">div#horizontal-menu-bar-wrapper</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE SEARCH CONTAINER ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE SEARCH CONTAINER =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">div#horizontal-search-container </span>{
+<span style="color: #80bcb6;">div#horizontal-search-container</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE LOGO / BRANDING ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE LOGO / BRANDING =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">div#header-logo-container </span>{
+<span style="color: #80bcb6;">div#header-logo-container</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE PAGE TITLE ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE PAGE TITLE =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">div#headerTextDiv </span>{
+<span style="color: #80bcb6;">div#headerTextDiv</span> {
          <span style="color: #4d9391;">display</span>: none; 
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE FOOTER ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= HIDE THE FOOTER =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">div#footer-container </span>{
+<span style="color: #80bcb6;">div#footer-container</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= STYLE THE PAGE ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= STYLE THE PAGE =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">body </span>{
+<span style="color: #80bcb6;">body</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000;">#000</span>;
 }
 
-<span style="color: #80bcb6;">body .container, #home-page-browse-content </span>{
+<span style="color: #80bcb6;">body .container, #home-page-browse-content</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000000;">#000000</span>;
          <span style="color: #4d9391;">color</span>: <span style="color: #ffffff; background-color: #000000;">#000000</span>;
 }
 
-<span style="color: #80bcb6;">#home-page-browse-content </span>{
+<span style="color: #80bcb6;">#home-page-browse-content</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000;">#000</span>;
 <span style="color: #4d9391;">padding</span>: 0;
 }
 
 
-<span style="color: #80bcb6;">#header-wrapper </span>{
+<span style="color: #80bcb6;">#header-wrapper</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000000;">black</span>;
 }
 
-<span style="color: #80bcb6;">#home-page-browse-header </span>{
+<span style="color: #80bcb6;">#home-page-browse-header</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000000;">#000000</span>;
 <span style="color: #4d9391;">margin-bottom</span>: 25px;
 }
 
-<span style="color: #80bcb6;">#selected-browse-label </span>{
+<span style="color: #80bcb6;">#selected-browse-label</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000000;">#000000</span>;
 }
 
-<span style="color: #80bcb6;">#browse-sub-category-menu button.selected, #browse-sub-category-menu button.selected:hover </span>{
+<span style="color: #80bcb6;">#browse-sub-category-menu button.selected, #browse-sub-category-menu button.selected:hover</span> {
          <span style="color: #4d9391;">border-color</span>: <span style="color: #ffffff; background-color: #0087AB;">#0087AB</span> <span style="color: #80bcb6;">!important</span>;
          <span style="color: #4d9391;">background-color</span>: <span style="color: #000000; background-color: #97c6d3;">#97c6d3</span> <span style="color: #80bcb6;">!important</span>;
          <span style="color: #4d9391;">color</span>: <span style="color: #000000; background-color: #ffffff;">#ffffff</span> <span style="color: #80bcb6;">!important</span>;
 }
 
-<span style="color: #80bcb6;">.btn-toolbar.pull-right </span>{
+<span style="color: #80bcb6;">.btn-toolbar.pull-right</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #80bcb6;">a#selected-browse-search-link </span>{
+<span style="color: #80bcb6;">a#selected-browse-search-link</span> {
          <span style="color: #4d9391;">color</span>: <span style="color: #000000; background-color: #fff;">#fff</span>;
 }
 
-<span style="color: #80bcb6;">div#more-browse-results </span>{
+<span style="color: #80bcb6;">div#more-browse-results</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #80bcb6;">#more-browse-results </span>{
+<span style="color: #80bcb6;">#more-browse-results</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000;">#000</span>;
 }
 
-<span style="color: #80bcb6;">.glyphicon-chevron-down:before </span>{
+<span style="color: #80bcb6;">.glyphicon-chevron-down:before</span> {
          <span style="color: #4d9391;">color</span>: <span style="color: #ffffff; background-color: #000000;">black</span>;
 }
 
-<span style="color: #80bcb6;">a#js-top </span>{
+<span style="color: #80bcb6;">a#js-top</span> {
          <span style="color: #4d9391;">display</span>: none<span style="color: #80bcb6;">!important</span>;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= BROWSE CATEGORY STYLES ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= BROWSE CATEGORY STYLES =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">.browse-category </span>{
+<span style="color: #80bcb6;">.browse-category</span> {
          <span style="color: #4d9391;">font-size</span>: 25px;
 <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000000;">#000000</span> <span style="color: #80bcb6;">!important</span>;
 }
 
-<span style="color: #80bcb6;">.browse-category div:hover </span>{
+<span style="color: #80bcb6;">.browse-category div:hover</span> {
          <span style="color: #4d9391;">text-decoration</span>: none;
 }
 
-<span style="color: #80bcb6;">.browse-category.selected </span>{
+<span style="color: #80bcb6;">.browse-category.selected</span> {
          <span style="color: #4d9391;">font-size</span>: 25px;
 }
 
-<span style="color: #80bcb6;">.jcarousel li </span>{
+<span style="color: #80bcb6;">.jcarousel li</span> {
          <span style="color: #4d9391;">border</span>: 3px solid <span style="color: #000000; background-color: #fff;">#fff</span>;
 }
 
-<span style="color: #80bcb6;">div#selected-browse-label </span>{
+<span style="color: #80bcb6;">div#selected-browse-label</span> {
          <span style="color: #4d9391;">display</span>: none;
 }
 
-<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= Covers ================= </span><span style="color: #545c5e;">*/</span>
+<span style="color: #545c5e;">/* </span><span style="color: #545c5e;">================= Covers =================</span><span style="color: #545c5e;"> */</span>
 
-<span style="color: #80bcb6;">.browse-thumbnail </span>{
+<span style="color: #80bcb6;">.browse-thumbnail</span> {
          <span style="color: #4d9391;">background-color</span>: <span style="color: #ffffff; background-color: #000;">#000</span>;
 <span style="color: #4d9391;">margin-bottom</span>: 50px
 }
 
-<span style="color: #80bcb6;">.browse-thumbnail img </span>{
+<span style="color: #80bcb6;">.browse-thumbnail img</span> {
                          <span style="color: #4d9391;">box-shadow</span>: 5px 5px 0px <span style="color: #000000; background-color: #ccc;">#ccc</span>;
 <span style="color: #4d9391;">border</span>: 1px solid <span style="color: #ffffff; background-color: #707070;">#707070</span>;
 }
@@ -290,6 +453,247 @@ nil
 <aside class="notes">
 <p>
 And here's all of it, but it is also in the link of the top slide and the Aspen Weekly.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org62f7496" data-background="./images/aspen-background.png">
+<h2 id="org62f7496">Custom Javascript</h2>
+<ul>
+<li class="fragment fade-left">Q: How to make Browse Categories automatically move</li>
+<li class="fragment fade-left">A: James Staub's <a href="https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU">custom JavaScript</a></li>
+
+</ul>
+<aside class="notes">
+<p>
+The old software displayed covers as an animated scroll. We had to figure out a way for the Browse Categories move on their own. James Staub, our senior systems librarian, wrote a JavaScript snippet to automate the rotation of Browse Categories. The snippet causes the current Category to advance to the next Category after twenty seconds and refresh the page after reaching the last Category in the Group. The last part is very important because this is what enables staff to make changes from their workstations without have to touch the hardware itself which is difficult to access. When the page refreshes, their changes appear. The snippet: 
+</p>
+
+</aside>
+</section>
+<section id="slide-org92bb755" data-background="./images/aspen-background.png">
+<h3 id="org92bb755">Move to next Category after X seconds</h3>
+<div class="org-src-container">
+
+<pre  class="fragment (t)"   ><code trim>&lt;script&gt;
+
+<span style="color: #4d9391;">if</span> (location.pathname == <span style="color: #6fb593;">'/'</span>) {
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">reloadURL</span> = window.location.href;
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">rotateTime</span> = 20000;
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">rotateCount</span> = 0;
+        <span style="color: #4d9391;">function</span> <span style="color: #80bcb6;">rotateCategory</span>() {
+                <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">bccount</span> = $(<span style="color: #6fb593;">'.jcarousel'</span>).jcarousel(<span style="color: #6fb593;">'items'</span>).length;
+                <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">nextCategory</span> = <span style="color: #ab98b5;">null</span>;                
+                nextCategory = $(<span style="color: #6fb593;">'[data-category-id='</span>+AspenDiscovery.Browse.curCategory+<span style="color: #6fb593;">']'</span>).next().attr(<span style="color: #6fb593;">'data-category-id'</span>);
+                <span style="color: #4d9391;">if</span> (!nextCategory || rotateCount &gt;= bccount - 1 ) { 
+                        window.location.href = reloadURL;
+                }
+                rotateCount++;
+                AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
+        }
+
+        setTimeout(
+                <span style="color: #4d9391;">function</span> <span style="color: #80bcb6;">waitForIt</span>(){
+                        <span style="color: #4d9391;">if</span>(<span style="color: #4d9391;">typeof</span> AspenDiscovery.Browse.curCategory !== <span style="color: #6fb593;">"undefined"</span>){
+                                setInterval(rotateCategory,rotateTime)
+                        }<span style="color: #4d9391;">else</span>{
+                                setTimeout(waitForIt,250)
+                        }
+                },750);
+}
+
+&lt;/script&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-orgff23ef5" data-background="./images/aspen-background.png">
+<h3 id="orgff23ef5">Refresh after the last Category</h3>
+<div class="org-src-container">
+
+<pre  class="fragment (t)"   ><code trim>&lt;script&gt;
+
+<span style="color: #4d9391;">if</span> (location.pathname == <span style="color: #6fb593;">'/'</span>) {
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">reloadURL</span> = window.location.href;
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">rotateTime</span> = 20000;
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">rotateCount</span> = 0;
+        <span style="color: #4d9391;">function</span> <span style="color: #80bcb6;">rotateCategory</span>() {
+                <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">bccount</span> = $(<span style="color: #6fb593;">'.jcarousel'</span>).jcarousel(<span style="color: #6fb593;">'items'</span>).length;
+                <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">nextCategory</span> = <span style="color: #ab98b5;">null</span>;                
+                nextCategory = $(<span style="color: #6fb593;">'[data-category-id='</span>+AspenDiscovery.Browse.curCategory+<span style="color: #6fb593;">']'</span>).next().attr(<span style="color: #6fb593;">'data-category-id'</span>);
+                <span style="color: #4d9391;">if</span> (!nextCategory || rotateCount &gt;= bccount - 1 ) { 
+                        window.location.href = reloadURL;
+                }
+                rotateCount++;
+                AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
+        }
+
+        setTimeout(
+                <span style="color: #4d9391;">function</span> <span style="color: #80bcb6;">waitForIt</span>(){
+                        <span style="color: #4d9391;">if</span>(<span style="color: #4d9391;">typeof</span> AspenDiscovery.Browse.curCategory !== <span style="color: #6fb593;">"undefined"</span>){
+                                setInterval(rotateCategory,rotateTime)
+                        }<span style="color: #4d9391;">else</span>{
+                                setTimeout(waitForIt,250)
+                        }
+                },750);
+}
+&lt;/script&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org82a5f4b" data-background="./images/aspen-background.png">
+<h3 id="org82a5f4b">All of It</h3>
+<div class="org-src-container">
+
+<pre  class="fragment (t)"   ><code trim>&lt;script&gt;
+
+<span style="color: #4d9391;">if</span> (location.pathname == <span style="color: #6fb593;">'/'</span>) {
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">reloadURL</span> = window.location.href;
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">rotateTime</span> = 20000;
+        <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">rotateCount</span> = 0;
+        <span style="color: #4d9391;">function</span> <span style="color: #80bcb6;">rotateCategory</span>() {
+                <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">bccount</span> = $(<span style="color: #6fb593;">'.jcarousel'</span>).jcarousel(<span style="color: #6fb593;">'items'</span>).length;
+                <span style="color: #4d9391;">var</span> <span style="color: #968cc7;">nextCategory</span> = <span style="color: #ab98b5;">null</span>;                
+                nextCategory = $(<span style="color: #6fb593;">'[data-category-id='</span>+AspenDiscovery.Browse.curCategory+<span style="color: #6fb593;">']'</span>).next().attr(<span style="color: #6fb593;">'data-category-id'</span>);
+                <span style="color: #4d9391;">if</span> (!nextCategory || rotateCount &gt;= bccount - 1 ) { 
+                        window.location.href = reloadURL;
+                }
+                rotateCount++;
+                AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
+        }
+
+        setTimeout(
+                <span style="color: #4d9391;">function</span> <span style="color: #80bcb6;">waitForIt</span>(){
+                        <span style="color: #4d9391;">if</span>(<span style="color: #4d9391;">typeof</span> AspenDiscovery.Browse.curCategory !== <span style="color: #6fb593;">"undefined"</span>){
+                                setInterval(rotateCategory,rotateTime)
+                        }<span style="color: #4d9391;">else</span>{
+                                setTimeout(waitForIt,250)
+                        }
+                },750);
+}
+&lt;/script&gt;
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org3f83ec5" data-background="./images/aspen-background.png">
+<h2 id="org3f83ec5">Granular Permissions</h2>
+
+<div id="org7670626" class="figure">
+<p><img src="./images/granular-permissions.png" alt="granular-permissions.png" class="fragment (t)" />
+</p>
+</div>
+<aside class="notes">
+<p>
+We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler. With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. Madison branch librarians can be given permissions to edit only the Madison-Display Browse Category Group. No one moves our stapler.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgcb3876f" data-background="./images/aspen-background.png">
+<h2 id="orgcb3876f">Staff Training</h2>
+<ul>
+<li class="fragment fade-left">Staff had never heard the term 'Browse Category' before</li>
+<li class="fragment fade-left">PDF instuction, video calls</li>
+<li class="fragment fade-left"><p>
+Positives and negatives 
+</p>
+<aside class="notes">
+<p>
+The staff who were creating content with old system didn't know about Aspen Browse Categories. I created a document that walked them through the process of creating Browse Categories. The first link on the training document was the Aspen Help Center. Big thank you to everyone at built that resource.
+</p>
+
+<p>
+I also made myself available for video calls.
+</p>
+
+<p>
+Positives:
+</p>
+<ul>
+<li>Some staff were really appreciative that their screens got fixed and there was a transparent chain of responsibility.</li>
+
+<li>Some staff are just poison-pilled on the topic of this hardware and the software that runs on it. Some too are just disappointed that functionality is a little different. For one, their lists would previously scroll in horizontal line like a Collection Spotlight. More on that later.</li>
+
+</ul>
+
+</aside></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org337d3a3" data-background="./images/aspen-background.png">
+<h2 id="org337d3a3">Future Steps</h2>
+<ul>
+<li class="fragment fade-left">Info boxes</li>
+<li class="fragment fade-left">Patron navigation</li>
+<li class="fragment fade-left">Randomized covers</li>
+<li class="fragment fade-left">use Web Builder (not Browse Categories)</li>
+
+</ul>
+<aside class="notes">
+<p>
+We would like to be able to tap covers and get an info box about the title. (The old software did this)
+</p>
+
+<p>
+Some way to have viewers navigate between categories
+</p>
+
+<p>
+Randomized covers (let's all put tickets in about this)
+</p>
+
+<p>
+Perhaps use Web Builder to serve the content instead of Browse Categories 
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orga377a71" data-background="./images/aspen-background.png">
+<h2 id="orga377a71">Takeaways</h2>
+<ul>
+<li class="fragment fade-left">Follow procedures</li>
+<li class="fragment fade-left">Learn to code*</li>
+<li class="fragment fade-left">Invest in a test server</li>
+<li class="fragment fade-left">Know thyself, respect others</li>
+
+</ul>
+<aside class="notes">
+<p>
+Follow your procedures
+</p>
+
+<p>
+If we worked fast this could have taken two-weeks, more realistically two months. But it took two years and this really caused me to evaluate why that was. There was a lot of introspection and a lot of analysis my team and my work environment. It definitely made me question if I wanted to continue in at my job.  
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org35fdd34" data-background="./images/aspen-background.png">
+<h2 id="org35fdd34">All the Things</h2>
+<ul>
+<li><a href="https://bld.library.nashville.org">Bellevue branch</a></li>
+<li><a href="https://bxd.library.nashville.org">Bordeaux branch</a></li>
+<li><a href="https://epd.library.nashville.org">Edmondson Pike branch</a></li>
+<li><a href="https://mad.library.nashville.org">Madison branch (screen one)</a></li>
+<li><a href="https://mad2.library.nashville.org">Madison branch (screen two)</a></li>
+<li><a href="https://sed.library.nashville.org">Southeast branch</a></li>
+<li><a href="https://wpd.library.nashville.org">Watkins Park branch</a></li>
+
+</ul>
+<aside class="notes">
+<p>
+
 </p>
 
 </aside>

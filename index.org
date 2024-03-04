@@ -426,7 +426,7 @@ if (location.pathname == '/') {
 #+ATTR_REVEAL: :frag (t)
 [[./images/granular-permissions.png]]
 #+BEGIN_NOTES
-We have a lot of Browse Categories at our library (probably too many). The Collections & Technology team manages the system-wide Browse Category Groups centrally and we didn't want anyone moving our stapler. With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. Madison branch librarians can be given permissions to edit only the Madison-Display Browse Category Group. No one moves our stapler.    
+We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler. With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. Madison branch librarians can be given permissions to edit only the Madison-Display Browse Category Group. No one moves our stapler.
 #+END_NOTES
 * Staff Training
 #+ATTR_REVEAL: :frag (t) 
@@ -434,7 +434,9 @@ We have a lot of Browse Categories at our library (probably too many). The Colle
 - PDF instuction, video calls
 - Positives and negatives 
  #+BEGIN_NOTES
-The staff who were creating content with old system didn't know about Aspen Browse Categories. I created a document that walked them through the process of creating Browse Categories. I also made myself available for video calls. The first link on the training document was the Aspen Help Center. The documentation in the Aspen Help Center was a boon to both me and the staff who are the folks actually creating content.
+The staff who were creating content with old system didn't know about Aspen Browse Categories. I created a document that walked them through the process of creating Browse Categories. The first link on the training document was the Aspen Help Center. Big thank you to everyone at built that resource.
+
+I also made myself available for video calls.
 
 Positives:
 - Some staff were really appreciative that their screens got fixed and there was a transparent chain of responsibility.
@@ -446,13 +448,13 @@ Positives:
 - Info boxes
 - Patron navigation
 - Randomized covers
-- Web Builder (not Browse Categories)
+- use Web Builder (not Browse Categories)
 #+BEGIN_NOTES
 We would like to be able to tap covers and get an info box about the title. (The old software did this)
 
 Some way to have viewers navigate between categories
 
-Randomized covers
+Randomized covers (let's all put tickets in about this)
 
 Perhaps use Web Builder to serve the content instead of Browse Categories 
 #+END_NOTES
