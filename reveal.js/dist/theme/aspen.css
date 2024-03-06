@@ -16,12 +16,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 :root {
   --r-background-color: black;
-  --r-main-font: Ubuntu, Helvetica, sans-serif;
+  --r-main-font: Ubuntu-Regular, Helvetica, sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #fff;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Ubuntu, Helvetica, sans-serif;
+  --r-heading-font: Ubuntu-Regular, Helvetica, sans-serif;
   --r-heading-color: #fff;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
