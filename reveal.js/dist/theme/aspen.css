@@ -15,7 +15,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: red;
+  --r-background-color: black;
   --r-main-font: Ubuntu, Helvetica, sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #fff;
@@ -25,7 +25,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading-color: #fff;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: normal;
   --r-heading-text-shadow: none;
   --r-heading-font-weight: 600;
   --r-heading1-text-shadow: none;
@@ -306,8 +306,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * LINKS
  *********************************************/
 .reveal a {
-  color: white;
-  text-decoration: none;
+  color: yellow;
+  text-decoration: underline;
   transition: color 0.15s ease;
 }
 
@@ -350,7 +350,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: red;
+  background: #01b4d8;
   color: white;
 }
 

@@ -1,12 +1,12 @@
 :REVEAL_PROPERTIES:
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND: ./images/aspen-background.png
 #+REVEAL_TITLE_SLIDE_BACKGROUND: ./images/aspen-background.png
-#+REVEAL_THEME: aspen-red
+#+REVEAL_THEME: aspen
 #+REVEAL_HLEVEL: 1
 #+REVEAL_PLUGINS: (markdown notes)
 #+REVEAL_DEFAULT_FRAG_STYLE: fade-left
 #+OPTIONS: timestamp:nil toc:0 num:nil
-#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories As Digital Signage</h2><b>AspenCon 2023</b><p style="line-height: 0.5em;"><span style="font-size: 0.5em;">Bryan Neil Jones<br>Nashville Public Library</span></p><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends.<br>First, I want to thank everyone that helped put AspenCon together. Organizing and running a convention is a huge lift and appreciate the work everyone has done to make this happen.<br>Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.<br>We had these maybe 34" all in computers embedded in walls and shelf ends.</aside>
+#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories<br>as Digital Signage</h2><b>AspenCon 2024</b><p style="line-height: 0.5em;"><span style="font-size: 0.5em;">Bryan Neil Jones<br>Nashville Public Library</span></p><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends.<br>First, I want to thank everyone that helped put AspenCon together. Organizing and running a convention is a huge lift and appreciate the work everyone has done to make this happen.<br>Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.<br>We had these maybe 34" all in computers embedded in walls and shelf ends.</aside>
 :END:
 
 * The Problem
@@ -47,7 +47,7 @@ This is what they look like now, embedded in the wall. This is directly across f
 + Staff have granular permissions to only update only the screens at their locations.
 + So did we get here?
 #+END_NOTES
-* First Steps
+* First steps
 #+ATTR_REVEAL: :frag (t) 
 - Full screen, locked down
 - [[https://www.kioware.com/][Kioware]]
@@ -57,7 +57,7 @@ The old software had kiosk-like features that would launch the software in fulls
 + Ultimately, we went with Kioware as this satisfied the security concerns of our IT department, and we were already using it on our OPACs. 
 + Depending on your circumstances, Firefox in kiosk mode could be a great free alternative.
 #+END_NOTES
-** first steps 			 
+** First steps 			 
  #+ATTR_REVEAL: :frag (t)
 - Q: How to scope content to a specific branch?
 - A: Dummy locations for each piece of hardware
@@ -70,7 +70,7 @@ Effected branches were accustomed to creating content specific to their branch.
 #+BEGIN_NOTES
 This is what it looks like in Aspen Admin GUI. In the Aspen Locations table there is a branch named 'Bellevue' but her u see the word '-Display' appended to it.
 #+END_NOTES 
-** first steps 			 
+** First steps 			 
  #+ATTR_REVEAL: :frag (t)
 - Q: How to scope content to a specific branch?
 - A: Browse Category Groups for each dummy location
@@ -90,7 +90,7 @@ This is what it looks like in Aspen Admin GUI.
 #+BEGIN_NOTES
 
 #+END_NOTES
-** Custom Theme + Custom CSS 
+** Custom theme + custom CSS 
 #+ATTR_REVEAL: :frag (t)
 + Eliminates: arrows, mouse, alert bar, and scroll bar
 + Eliminates: language selector, search bar, logo
@@ -100,7 +100,7 @@ This is what it looks like in Aspen Admin GUI.
 + Eliminates: the language selector, search bar, and logo
 + And a number of other things
 #+END_NOTES
-** Remove Mouse 
+** Remove mouse 
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
 /* ================= GET RID OF POINTER ================= */
@@ -112,7 +112,7 @@ pointer-events: none;
 #+BEGIN_NOTES
 It removes the mouse
 #+END_NOTES
-** Hide Scrollbar   
+** Hide scrollbar   
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code 
 /* ================= HIDE SCROLLBAR ================= */
@@ -424,9 +424,17 @@ if (location.pathname == '/') {
 #+END_SRC
 * Granular Permissions
 #+ATTR_REVEAL: :frag (t)
+[[./images/stapler.png]]
+#+BEGIN_NOTES
+We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
+
+With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. This permission is called 'Administer Selected Browse Category Groups'.
+#+END_NOTES
+** Administer selected Browse Category Groups aka don't move my stapler
+#+ATTR_REVEAL: :frag (t)
 [[./images/granular-permissions.png]]
 #+BEGIN_NOTES
-We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler. With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. Madison branch librarians can be given permissions to edit only the Madison-Display Browse Category Group. No one moves our stapler.
+Madison branch librarians can be given permissions to edit only the Madison-Display Browse Category Group. No one moves our stapler.
 #+END_NOTES
 * Staff Training
 #+ATTR_REVEAL: :frag (t) 
