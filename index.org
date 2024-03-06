@@ -331,67 +331,27 @@ The old software displayed covers as an animated scroll. We had to figure out a 
 ** Move to next Category after X seconds
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
-<script>
-
 if (location.pathname == '/') {
 	var reloadURL = window.location.href;
 	var rotateTime = 20000;
 	var rotateCount = 0;
-	function rotateCategory() {
-		var bccount = $('.jcarousel').jcarousel('items').length;
-		var nextCategory = null;		
-		nextCategory = $('[data-category-id='+AspenDiscovery.Browse.curCategory+']').next().attr('data-category-id');
-		if (!nextCategory || rotateCount >= bccount - 1 ) { 
-			window.location.href = reloadURL;
-		}
-		rotateCount++;
-		AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
-	}
-	
-	setTimeout(
-		function waitForIt(){
-			if(typeof AspenDiscovery.Browse.curCategory !== "undefined"){
-				setInterval(rotateCategory,rotateTime)
-			}else{
-				setTimeout(waitForIt,250)
-			}
-		},750);
-}
-
-</script>
+	function rotateCategory()
 #+END_SRC
 ** Refresh after the last Category
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
-<script>
-
-if (location.pathname == '/') {
-	var reloadURL = window.location.href;
-	var rotateTime = 20000;
-	var rotateCount = 0;
-	function rotateCategory() {
-		var bccount = $('.jcarousel').jcarousel('items').length;
-		var nextCategory = null;		
-		nextCategory = $('[data-category-id='+AspenDiscovery.Browse.curCategory+']').next().attr('data-category-id');
-		if (!nextCategory || rotateCount >= bccount - 1 ) { 
-			window.location.href = reloadURL;
-		}
-		rotateCount++;
-		AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
-	}
-	
-	setTimeout(
-		function waitForIt(){
-			if(typeof AspenDiscovery.Browse.curCategory !== "undefined"){
-				setInterval(rotateCategory,rotateTime)
-			}else{
-				setTimeout(waitForIt,250)
-			}
-		},750);
+function rotateCategory() {
+      var bccount = $('.jcarousel').jcarousel('items').length;
+      var nextCategory = null;		
+      nextCategory = $('[data-category-id='+AspenDiscovery.Browse.curCategory+']').next().attr('data-category-id');
+      if (!nextCategory || rotateCount >= bccount - 1 ) { 
+                          window.location.href = reloadURL;
+      }
+      rotateCount++;
+      AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
 }
-</script>
 #+END_SRC
-** All of It
+** All of it
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
 <script>
@@ -477,14 +437,14 @@ Follow your procedures
 
 If we worked fast this could have taken two-weeks, more realistically two months. But it took two years and this really caused me to evaluate why that was. There was a lot of introspection and a lot of analysis my team and my work environment. It definitely made me question if I wanted to continue in at my job.  
 #+END_NOTES
-* All the Things
-- [[https://bld.library.nashville.org][Bellevue branch]]
-- [[https://bxd.library.nashville.org][Bordeaux branch]]
-- [[https://epd.library.nashville.org][Edmondson Pike branch]]
-- [[https://mad.library.nashville.org][Madison branch (screen one)]]
-- [[https://mad2.library.nashville.org][Madison branch (screen two)]]
-- [[https://sed.library.nashville.org][Southeast branch]]
-- [[https://wpd.library.nashville.org][Watkins Park branch]]
+* All the Things in All the Places
+- [[https://bld.library.nashville.org][Bellevue]]
+- [[https://bxd.library.nashville.org][Bordeaux]]
+- [[https://epd.library.nashville.org][Edmondson Pike]]
+- [[https://mad.library.nashville.org][Madison (screen one)]]
+- [[https://mad2.library.nashville.org][Madison (screen two)]]
+- [[https://sed.library.nashville.org][Southeast]]
+- [[https://wpd.library.nashville.org][Watkins Park]]
 #+BEGIN_NOTES
 
 #+END_NOTES  
