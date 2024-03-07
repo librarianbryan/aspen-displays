@@ -6,20 +6,29 @@
 #+REVEAL_PLUGINS: (markdown notes)
 #+REVEAL_DEFAULT_FRAG_STYLE: fade-left
 #+OPTIONS: timestamp:nil toc:0 num:nil
-#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories<br>as Digital Signage</h2><b>AspenCon 2024</b><p style="line-height: 0.5em;"><span style="font-size: 0.5em;">Bryan Neil Jones<br>Nashville Public Library</span></p><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed hardware to diplay staff curated Browse Categories and Lists on walls and shelf ends.<br>First, I want to thank everyone that helped put AspenCon together. Organizing and running a convention is a huge lift and appreciate the work everyone has done to make this happen.<br>Second, for lack of a better term I was the project manager of the project I am speaking about today but in truth the work was done by colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and all the devs at ByWater.<br>We had these maybe 34" all in computers embedded in walls and shelf ends.</aside>
+#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories<br>as Digital Signage</h2><b>AspenCon 2024</b><p style="line-height: 0.5em;"><span style="font-size: 0.5em;">Bryan Neil Jones<br>Nashville Public Library</span></p><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed digital signage to feature Browse Categories.<br><br>First, I want to thank everyone that helped put AspenCon together. Organizing an event like this a huge lift and I appreciate the work everyone has done to make this happen.<br><br>Second, I want to note that though I am the person speaking here today, in truth the work was done by my colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and the devs at ByWater. And all the folks at my library at actually make the content for the screens.</aside>
 :END:
 
-* The Problem
+* The 'Screens'
+ #+ATTR_REVEAL: :frag (t)
+ * 32" monitors embedded in walls and shelf ends   
+ * 15 monitors at 5 branchs
+ * Displayed Aspen Lists created by staff
+#+BEGIN_NOTES
+The hardware I am talking about today were actually all-in-one computers but for convience, I will refer to them as the 'screens'
+1) 32" screens embedded in walls and shelf ends, portrait oriented.
+2) 15 screens at 5 branches
+3) Server styled Aspen Lists created by staff at those branches
+#+END_NOTES
+** The Problem
  #+ATTR_REVEAL: :frag (t)
  * Aloof administrators    
  * Finicky software
  * Broken workflows
- #+BEGIN_NOTES
-- An administrator that no longer works at NPL, subverted protocol and made a business relationship local avertising company. Because our normal procedures for on boarding a new technology wasn't followed, chaos ensured.
-- This advertising company made their own CMS for us which pulled in data from Aspen; namely, staff lists . They also gave us access to their servers.
-- This meant we could, if wanted, try to troubleshoot it problems, the adverstising company was not responding to trouble tickets. There was perpetual confusion as to who was responsible for what.
-
-In short, their software stack was fragile and whose responsibility it was to fix it was nebulous.  
+#+BEGIN_NOTES
+1) An administrator that no longer works at my library, subverted protocol and made a business relationship with a local avertising company. Because our normal procedures for on boarding new technology wasn't followed, chaos ensured.
+2) This advertising company developed a bepoke content management system to server content to the screens. This pulled data from Aspen; namely, staff Lists.
+3) There was perpetual confusion as to who was responsible for what. In short, their software stack was fragile, and whose responsibility it was to fix it was nebulous.  
  #+END_NOTES
 ** [[./images/display-1.jpeg]]
 #+BEGIN_NOTES
@@ -27,7 +36,7 @@ What we would often end up with was this. A screen with nothing on it.
 
 Here's what one of the screens looks like on a standard issue book cart. 
 
-Notice the reflection of the strikingly handsome systems librarian reflected in the glass.
+So that's the problem. What's the solution?
 #+END_NOTES
 ** The Solution
 #+BEGIN_NOTES
@@ -42,10 +51,10 @@ Specifically, Browse Categories
 #+BEGIN_NOTES
 This is what they look like now, embedded in the wall. This is directly across from our circulation desk at the Madison Branch.
 + What you see here are Browse Categories created from staff Lists.
-+ They rotate automatically on their own to the next Browse Category after 20 seconds.
++ They move automatically to next Browse Category after 20 seconds.
 + Staff have autonomy to create their own Categories from Lists or Searches.
-+ Staff have granular permissions to only update only the screens at their locations.
-+ So did we get here?
++ And granular permissions to only update only the screens at their locations.
++ So how did we get here?
 #+END_NOTES
 * First steps
 #+ATTR_REVEAL: :frag (t) 
