@@ -409,10 +409,10 @@ Here are the accounts that can edit the Madison-Display Browse Category Group. N
 #+END_NOTES
 * Staff Training
 #+ATTR_REVEAL: :frag (t) 
-- Staff had never heard the term 'Browse Category' before
-- PDF instuction, video calls
+- What's a 'Browse Category'?
+- PDF instruction, video calls
 - Positives and negatives 
- #+BEGIN_NOTES 
+#+BEGIN_NOTES 
 I had to train staff to use the 'new platform'. 
 
 1) The staff who were creating content with old system didn't know about Aspen Browse Categories. 
@@ -423,23 +423,19 @@ Positives:
 - Some staff were really appreciative that their screens got fixed and there was a transparent chain of responsibility.
 
 - Some staff are just poison-pilled on the topic of this hardware and the software that runs on it. Some too are just disappointed that functionality is a little different. For one, their lists would previously scroll in horizontal line like a Collection Spotlight. More on that later.
- #+END_NOTES
+#+END_NOTES
 * Future Steps
 #+ATTR_REVEAL: :frag (t) 
-- Info boxes
-- Patron navigation
-- Randomized covers
-- use Web Builder (not Browse Categories)
-#+BEGIN_NOTES
-
-We would like to be able to tap covers and get an info box about the title. (The old software did this)
-
-Some way to have viewers navigate between categories
-
-Randomized covers (let's all put tickets in about this)
-
-Perhaps use Web Builder to serve the content instead of Browse Categories 
-#+END_NOTES
+1) Info boxes
+2) Patron navigation
+3) Randomized covers
+4) Use Web Builder (not Browse Categories)
+#+BEGIN_NOTES  
+1) We would like to be able to tap covers and get an info box about the title. (The old software did this)
+2) Some way to have viewers navigate between categories
+3) Randomized covers (let's all put tickets in about this)
+4) Perhaps use Web Builder to serve the content instead of Browse Categories 
+#+END_NOTES 
 * Takeaways
 #+ATTR_REVEAL: :frag (t) 
 - Follow procedures
