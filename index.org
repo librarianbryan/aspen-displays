@@ -69,12 +69,12 @@ This is what they look like now, embedded in the wall. This is directly across f
 ** First steps 			 
  #+ATTR_REVEAL: :frag (t)
 - Q: How to scope content to a specific branch?
-- A: Dummy locations for each piece of hardware
+- A: Dummy locations for each location
 #+BEGIN_NOTES
 Effected branches were accustomed to creating content specific to their branch. 
 + To achieve feature parity, in Aspen we created a dummy location; e.g., the Madison branch got a Location called Madison-Display. 	
 #+END_NOTES
-** 
+**  
 [[./images/display-locations.png]]
 #+BEGIN_NOTES
 This is what it looks like in Aspen Admin GUI. In the Aspen Locations table there is a branch named 'Bellevue' but her u see the word '-Display' appended to it.
@@ -84,7 +84,8 @@ This is what it looks like in Aspen Admin GUI. In the Aspen Locations table ther
 - Q: How to scope content to a specific branch?
 - A: Browse Category Groups for each dummy location
 #+BEGIN_NOTES
-Each dummy branch location got its own Browse Category Group; e.g., the Madison-Display location is assigned a Browse Category Group called Madison-Display.
+1) How to scope content to a specific branch?
+2) Each dummy branch location got its own Browse Category Group; e.g., the Madison-Display location is assigned a Browse Category Group called Madison-Display.
 #+END_NOTES
 ** 
 [[./images/browse-category-groups.png]]
@@ -135,7 +136,7 @@ overflow-y: hidden
 #+BEGIN_NOTES
 This removes the scroll bar
 #+END_NOTES
-** Hide bottom row of covers 
+** Set correct # of covers 
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
 /* ================= HIDE BOTTOM ROW OF COVERS ================= */
@@ -407,7 +408,7 @@ We have a lot of Browse Categories at our library (probably too many). The Colle
 #+BEGIN_NOTES
 Here are the accounts that can edit the Madison-Display Browse Category Group. No one moves our stapler though maybe it would psychologically healthy if someone did.
 #+END_NOTES
-* Staff Training
+  * Staff Training
 #+ATTR_REVEAL: :frag (t) 
 - What's a 'Browse Category'?
 - PDF instruction, video calls
