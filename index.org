@@ -6,7 +6,7 @@
 #+REVEAL_PLUGINS: (markdown notes)
 #+REVEAL_DEFAULT_FRAG_STYLE: fade-left
 #+OPTIONS: timestamp:nil toc:0 num:nil
-#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories<br>as Digital Signage</h2><b>AspenCon 2024</b><p style="line-height: 0.5em;"><span style="font-size: 0.5em;">Bryan Neil Jones<br>Nashville Public Library</span></p><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today I am going to tell you about how Nashville Public Library repurposed digital signage to feature Browse Categories.<br><br>First, I want to thank everyone that helped put AspenCon together. Organizing an event like this a huge lift and I appreciate the work everyone has done to make this happen.<br><br>Second, I want to note that though I am the person speaking here today, in truth the work was done by my colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and the devs at ByWater. And all the folks at my library at actually make the content for the screens.</aside>
+#+REVEAL_TITLE_SLIDE: <h2>Aspen Browse Categories<br>as Digital Signage</h2><b>AspenCon 2024</b><p style="line-height: 0.5em;"><span style="font-size: 0.5em;">Bryan Neil Jones<br>Nashville Public Library</span></p><aside class="notes">Hi. I am Bryan. I am a Systems Librarian at Nashville Public Library. Today, I am going to tell you about how Nashville Public Library repurposed digital signage to feature Browse Categories.<br><br>First, I want to thank everyone that helped put AspenCon together. Organizing an event like this a huge lift and I appreciate the work everyone is doing to make this happen.<br><br>Second, I want to note that though I am the person speaking here today, in truth the work was done by my colleages: Jenny Ellis (our web designer), James Staub (the senior Systems Librarian), Larry Jirik (our Intrastructure Manager), Thomas Hammonds (our Applications Analyst), and the devs at ByWater. And all the folks at my library at actually make the content for the screens.</aside>
 :END:
 
 * The 'Screens'
@@ -16,9 +16,9 @@
  * Displayed Aspen Lists created by staff
 #+BEGIN_NOTES
 The hardware I am talking about today were actually all-in-one computers but for convience, I will refer to them as the 'screens'
-1) 32" screens embedded in walls and shelf ends, portrait oriented.
+1) 32" portrait-oriented, all-in-one computers, embedded in walls and shelf ends.
 2) 15 screens at 5 branches
-3) Server styled Aspen Lists created by staff at those branches
+3) Third party software pulled data from Aspen and displayed it in an aesthetically pleasing way
 #+END_NOTES
 ** The Problem
  #+ATTR_REVEAL: :frag (t)
@@ -27,14 +27,14 @@ The hardware I am talking about today were actually all-in-one computers but for
  * Broken workflows
 #+BEGIN_NOTES
 1) An administrator that no longer works at my library, subverted protocol and made a business relationship with a local avertising company. Because our normal procedures for on boarding new technology wasn't followed, chaos ensured.
-2) This advertising company developed a bepoke content management system to server content to the screens. This pulled data from Aspen; namely, staff Lists.
-3) There was perpetual confusion as to who was responsible for what. In short, their software stack was fragile, and whose responsibility it was to fix it was nebulous.  
+2) This advertising company developed a bepoke content management system to serve content to the screens. The method they had created to pulled data from Aspen, was not stable.
+3) There was perpetual confusion as to who was responsible for what. In short, their software stack was fragile, and whose responsibility it was to fix it was nebulous. And staff were very frustrated. 
  #+END_NOTES
 ** [[./images/display-1.jpeg]]
 #+BEGIN_NOTES
-What we would often end up with was this. A screen with nothing on it.
+What we would often end up with was this: a screen with nothing on it.
 
-Here's what one of the screens looks like on a standard issue book cart. 
+Here's what one of the screens looks like on a standard issue book cart.
 
 So that's the problem. What's the solution?
 #+END_NOTES
@@ -52,7 +52,7 @@ Specifically, Browse Categories
 This is what they look like now, embedded in the wall. This is directly across from our circulation desk at the Madison Branch.
 + What you see here are Browse Categories created from staff Lists.
 + They move automatically to next Browse Category after 20 seconds.
-+ Staff have autonomy to create their own Categories from Lists or Searches.
++ Staff at branches create their own Categories from Lists or Searches.
 + And granular permissions to only update only the screens at their locations.
 + So how did we get here?
 #+END_NOTES
@@ -71,8 +71,8 @@ This is what they look like now, embedded in the wall. This is directly across f
 - Q: How to scope content to a specific branch?
 - A: Dummy locations for each location
 #+BEGIN_NOTES
-Effected branches were accustomed to creating content specific to their branch. 
-+ To achieve feature parity, in Aspen we created a dummy location; e.g., the Madison branch got a Location called Madison-Display. 	
+1) Effected branches were accustomed to creating content specific to their branch. 
+2) To achieve feature parity, in Aspen we created a dummy location; e.g., the Bellevue branch got a Location called Bellevue-Display.  	
 #+END_NOTES
 **  
 [[./images/display-locations.png]]
@@ -82,18 +82,19 @@ This is what it looks like in Aspen Admin GUI. In the Aspen Locations table ther
 ** First steps 			 
  #+ATTR_REVEAL: :frag (t)
 - Q: How to scope content to a specific branch?
-- A: Browse Category Groups for each dummy location
+- A: Browse Category Groups for each dummy Location
 #+BEGIN_NOTES
-1) How to scope content to a specific branch?
-2) Each dummy branch location got its own Browse Category Group; e.g., the Madison-Display location is assigned a Browse Category Group called Madison-Display.
+1) I thought we answered this question. Wait there is more. 
+2) A corresponding Browse Category Group was created for each dummy Location; e.g., the Browse Category Group is assigned to the Bellevue-Display Location.
 #+END_NOTES
 ** 
 [[./images/browse-category-groups.png]]
 #+BEGIN_NOTES
 This is what it looks like in Aspen Admin GUI.
-#+END_NOTES
 
-* Custom Theme+Custom CSS 
+Those were the first steps. There was more to do.
+#+END_NOTES
+* Custom Theme/CSS 
 #+ATTR_REVEAL: :frag (t)
 - Q: How to make it look great?
 - A: Jenny Ellis' beautiful, dark [[https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU][theme]]
@@ -102,18 +103,18 @@ This is what it looks like in Aspen Admin GUI.
 2) Jenny Ellis' beautiful, dark theme
 3) Let's dig into it a little bit
 #+END_NOTES
-** Custom theme + custom CSS 
+** Custom theme/CSS 
 #+ATTR_REVEAL: :frag (t)
 + Eliminates: arrows, mouse, alert bar, and scroll bar
 + Eliminates: language selector, search bar, logo
-+ Sets the correct number of rows
++ Sets the correct number of book covers 
 #+BEGIN_NOTES
+So what's custom about it?
 1) It elminates arrows, mouse, alert bar, and scroll bar
 2) Eliminates: the language selector, search bar, and logo
 3) And a number of other things
 #+END_NOTES
 ** Remove mouse 
-#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
 /* ================= GET RID OF POINTER ================= */
 
@@ -125,7 +126,6 @@ pointer-events: none;
 This removes the mouse
 #+END_NOTES
 ** Hide scrollbar   
-#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code 
 /* ================= HIDE SCROLLBAR ================= */
 
@@ -137,7 +137,6 @@ overflow-y: hidden
 This removes the scroll bar
 #+END_NOTES
 ** Set correct # of covers 
-#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
 /* ================= HIDE BOTTOM ROW OF COVERS ================= */
 /* Hides all covers after the 4th row, 
@@ -150,7 +149,6 @@ so the 5th row of covers and all that follow */
 This sets the correct number of covers for our hardware. It's notable that all of our hardware is the same size. This makes things a lot easier.
 #+END_NOTES
 ** All of it
-#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC css :export code
 /* ================= GET RID OF POINTER ================= */
 
@@ -331,7 +329,7 @@ border: 1px solid #707070;
 }
 #+END_SRC
 #+BEGIN_NOTES
-And here's all of it, but it is also in the link of the top slide and the Aspen Weekly.
+And here's all of it, but it is also linked of the top slide, and Aspen Weekly issue 143.
 #+END_NOTES
 * Custom Javascript
 #+ATTR_REVEAL: :frag (t)
@@ -394,15 +392,18 @@ if (location.pathname == '/') {
 }
 </script>
 #+END_SRC
-* Granular Permissions
-#+ATTR_REVEAL: :frag (t)
+* Granular Permissions aka don't move my stapler
+#+BEGIN_NOTES
+We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
+#+END_NOTES
+** Granular permissions
 [[./images/stapler.png]]
 #+BEGIN_NOTES
 We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
 
 1) With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. This permission is called 'Administer Selected Browse Category Groups'.
 #+END_NOTES
-** Administer selected Browse Category Groups aka don't move my stapler
+** Stapler movers
 #+ATTR_REVEAL: :frag (t)
 [[./images/granular-permissions.png]]
 #+BEGIN_NOTES
