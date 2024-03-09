@@ -392,28 +392,25 @@ if (location.pathname == '/') {
 }
 </script>
 #+END_SRC
-* Granular Permissions aka don't move my stapler
+* Granular permissions aka don't move my stapler
 #+BEGIN_NOTES
 We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
 #+END_NOTES
 ** Granular permissions
 [[./images/stapler.png]]
 #+BEGIN_NOTES
-We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
-
-1) With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. This permission is called 'Administer Selected Browse Category Groups'.
+With the release of Aspen Discovery 23.06 we had the ability granularly assign permissions to specific staff members to edit only specific Browse Category Groups. This permission is called 'Administer Selected Browse Category Groups'.
 #+END_NOTES
-** Stapler movers
-#+ATTR_REVEAL: :frag (t)
+** Don't move my stapler
 [[./images/granular-permissions.png]]
 #+BEGIN_NOTES
 Here are the accounts that can edit the Madison-Display Browse Category Group. No one moves our stapler though maybe it would psychologically healthy if someone did.
 #+END_NOTES
-  * Staff Training
+* Staff Training
 #+ATTR_REVEAL: :frag (t) 
 - What's a 'Browse Category'?
-- PDF instruction, video calls
-- Positives and negatives 
+- instructional PDF, video calls
+- +/-
 #+BEGIN_NOTES 
 I had to train staff to use the 'new platform'. 
 
@@ -421,17 +418,17 @@ I had to train staff to use the 'new platform'.
 
 2) I created a document that walked them through the process of creating Browse Categories. The first link on the training document was the Aspen Help Center. Big thank you to everyone at built that resource. I also made myself available for video calls.
 
-Positives:
-- Some staff were really appreciative that their screens got fixed and there was a transparent chain of responsibility.
-
-- Some staff are just poison-pilled on the topic of this hardware and the software that runs on it. Some too are just disappointed that functionality is a little different. For one, their lists would previously scroll in horizontal line like a Collection Spotlight. More on that later.
-#+END_NOTES
+3) P: Staff were appreciative that their screens got fixed. 
+P: Staff appreciative there was a clear chain of responsibility.
+N: Some staff were disappointed in the functionality. I could have managed the expectations better. It was difficult for me to communicate that Searches were the best way to have dynamic Categories as opposed to Lists. 
+N: Some staff are just poison-pilled on the topic of this hardware. 
+#+END_NOTES 
 * Future Steps
 #+ATTR_REVEAL: :frag (t) 
-1) Info boxes
-2) Patron navigation
-3) Randomized covers
-4) Use Web Builder (not Browse Categories)
+- Info boxes
+- Interactive navigation
+- Randomized covers
+- Use Web Builder (not Browse Categories)
 #+BEGIN_NOTES  
 1) We would like to be able to tap covers and get an info box about the title. (The old software did this)
 2) Some way to have viewers navigate between categories
