@@ -331,12 +331,15 @@ border: 1px solid #707070;
 #+BEGIN_NOTES
 And here's all of it, but it is also linked of the top slide, and Aspen Weekly issue 143.
 #+END_NOTES
-* Custom Javascript
+* Custom JavaScript
 #+ATTR_REVEAL: :frag (t)
 - Q: How to make Browse Categories automatically move 
 - A: James Staub's [[https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU][custom JavaScript]]
 #+BEGIN_NOTES
-The old software displayed covers as an animated scroll. We had to figure out a way for the Browse Categories move on their own. James Staub, our senior systems librarian, wrote a JavaScript snippet to automate the rotation of Browse Categories. The snippet causes the current Category to advance to the next Category after twenty seconds and refresh the page after reaching the last Category in the Group. The last part is very important because this is what enables staff to make changes from their workstations without have to touch the hardware itself which is difficult to access. When the page refreshes, their changes appear. The snippet: 
+1) The old software displayed covers as an animated scroll. We had to figure out a way for the Browse Categories move on their own. 
+2) James Staub, our senior systems librarian, wrote a JavaScript snippet to automate the rotation of Browse Categories. 
+- The snippet causes the current Category to advance to the next Category after twenty seconds 
+- Then refresh the page after reaching the last Category in the Group. The last part is very important because this is what enables staff to make changes from their workstations without have to touch the hardware itself which is difficult to access. When the page refreshes, their changes appear. 
 #+END_NOTES
 ** Move to next Category after X seconds
 #+ATTR_REVEAL: :frag (t)
@@ -347,6 +350,11 @@ if (location.pathname == '/') {
 	var rotateCount = 0;
 	function rotateCategory()
 #+END_SRC
+#+BEGIN_NOTES
+That variable right there--20k miliseconds.
+If you are watching closely, you might be thinking that actually doesn't make it move. 
+It's the fuction that is named but not known that makes it move. 
+#+END_NOTES
 ** Refresh after the last Category
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
@@ -361,6 +369,10 @@ function rotateCategory() {
       AspenDiscovery.Browse.changeBrowseCategory(nextCategory);
 }
 #+END_SRC
+#+BEGIN_NOTES
+Here's the fuction that actually makes it move. 
+Full disclosure, I can barely explain what this does. More on that later.
+#+END_NOTES
 ** All of it
 #+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
@@ -392,7 +404,12 @@ if (location.pathname == '/') {
 }
 </script>
 #+END_SRC
-* Granular permissions aka don't move my stapler
+#+BEGIN_NOTES
+And here's all of it. At the end if you have questions, we can go over it. 
+#+END_NOTES
+* Granular permissions
+#+REVEAL_ATTR: :frag (t)
+- aka don't move my stapler
 #+BEGIN_NOTES
 We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
 #+END_NOTES
@@ -438,11 +455,15 @@ N: Some staff are just poison-pilled on the topic of this hardware.
 * Takeaways
 #+ATTR_REVEAL: :frag (t) 
 - Follow procedures
-- Learn to code
+- Learn to code*
 - Invest in a test server
 - Know thyself, respect others
 #+BEGIN_NOTES
-Follow your procedures
+1) Follow your procedures. Though Aspen was the solution it was a solution with were scrambling for because things were done outside the normal ***
+2) Learn to code with a big asterisk. Obviously, if you can write the CSS + JavaScript yourself that's a boon. The asterisk is there because valuing the work of computer programmers above the work**** of others is toxic. AND if can/can't code AI has made understanding what the code is doing and/or writing it yourself by a significant degree. Bigger asterisk: current business model for AI isn't ethical because the companies that are creating the commerical products have ignored copyright law to create their those, but are using that same copyright law to 
+3) Invest in a test server. Not strictly neccessary, but helpful when working on projects like this. 
+4) This project was difficult to complete. This caused a lot of introspection. I was the project manager so that's on me. This caused a lot of introspection. 
+
 
 If we worked fast this could have taken two-weeks, more realistically two months. But it took two years and this really caused me to evaluate why that was. There was a lot of introspection and a lot of analysis my team and my work environment. It definitely made me question if I wanted to continue in at my job.  
 #+END_NOTES
