@@ -454,15 +454,14 @@ I had to train staff to use the 'new platform'.
 - Follow procedures
 - Learn to code*
 - Invest in a test server
-- Know thyself, respect others
+- Respect yourself, respect others
 #+BEGIN_NOTES
 1) Follow your procedures. Though Aspen was the solution it was a solution with were scrambling for because things were done outside the normal ***
 2) Learn to code with a big asterisk. Obviously, if you can write the CSS + JavaScript yourself that's a boon. The asterisk is there because valuing the work of computer programmers above the work**** of others is toxic. AND if can/can't code AI has made understanding what the code is doing and/or writing it yourself by a significant degree. Bigger asterisk: current business model for AI isn't ethical because the companies that are creating the commerical products have ignored copyright law to create their those, but are using that same copyright law to 
 3) Invest in a test server. Not strictly neccessary, but helpful when working on projects like this. 
-4) This project was difficult to complete. This caused a lot of introspection. I was the project manager so that's on me. This caused a lot of introspection. 
+4) This project was difficult to complete. So much so that I considered pulling a Plan B, showing up here and doing a completely different presentation than what was advertised. And doing a presentation about how to deal with difficult workplace situations. Like I said though I really appreciate the work that everyone has done/is doing to make AspenCon a thing, so I'll wait to AspenCon 2 to pull those kinds of pranks.
 
-
-If we worked fast this could have taken two-weeks, more realistically two months. But it took two years and this really caused me to evaluate why that was. There was a lot of introspection and a lot of analysis my team and my work environment. It definitely made me question if I wanted to continue in at my job.  
+Bringing it back home, I was the project manager. If the project was difficult that is on me. Figuring why it was difficult, that introspection and asking for feedback.    
 #+END_NOTES
 * All the Things in All the Places
 - [[https://bld.library.nashville.org][Bellevue]]
