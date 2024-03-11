@@ -342,7 +342,6 @@ And here's all of it, but it is also linked of the top slide, and Aspen Weekly i
 - Then refresh the page after reaching the last Category in the Group. The last part is very important because this is what enables staff to make changes from their workstations without have to touch the hardware itself which is difficult to access. When the page refreshes, their changes appear. 
 #+END_NOTES
 ** Move to next Category after X seconds
-#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
 if (location.pathname == '/') {
 	var reloadURL = window.location.href;
@@ -356,7 +355,6 @@ If you are watching closely, you might be thinking that actually doesn't make it
 It's the fuction that is named but not known that makes it move. 
 #+END_NOTES
 ** Refresh after the last Category
-#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
 function rotateCategory() {
       var bccount = $('.jcarousel').jcarousel('items').length;
@@ -374,7 +372,6 @@ Here's the fuction that actually makes it move.
 Full disclosure, I can barely explain what this does. More on that later.
 #+END_NOTES
 ** All of it
-#+ATTR_REVEAL: :frag (t)
 #+BEGIN_SRC javascript :export code
 <script>
 
@@ -408,7 +405,7 @@ if (location.pathname == '/') {
 And here's all of it. At the end if you have questions, we can go over it. 
 #+END_NOTES
 * Granular permissions
-#+REVEAL_ATTR: :frag (t)
+#+ATTR_REVEAL: :frag (t)
 - aka don't move my stapler
 #+BEGIN_NOTES
 We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
@@ -436,9 +433,9 @@ I had to train staff to use the 'new platform'.
 2) I created a document that walked them through the process of creating Browse Categories. The first link on the training document was the Aspen Help Center. Big thank you to everyone at built that resource. I also made myself available for video calls.
 
 3) P: Staff were appreciative that their screens got fixed. 
-P: Staff appreciative there was a clear chain of responsibility.
-N: Some staff were disappointed in the functionality. I could have managed the expectations better. It was difficult for me to communicate that Searches were the best way to have dynamic Categories as opposed to Lists. 
-N: Some staff are just poison-pilled on the topic of this hardware. 
+- P: Staff appreciative there was a clear chain of responsibility.
+- N: Some staff were disappointed in the functionality. I could have managed the expectations better. It was difficult for me to communicate that Searches were the best way to have dynamic Categories as opposed to Lists. 
+- N: Some staff are just poison-pilled on the topic of this hardware. 
 #+END_NOTES 
 * Future Steps
 #+ATTR_REVEAL: :frag (t) 

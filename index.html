@@ -13,6 +13,17 @@
 
 <link rel="stylesheet" href="./reveal.js/dist/theme/aspen.css" id="theme"/>
 
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
 </head>
 <body>
 <div class="reveal">
@@ -21,8 +32,8 @@
 </section>
 
 <section>
-<section id="slide-orgf591d52" data-background="./images/aspen-background.png">
-<h2 id="orgf591d52">The 'Screens'</h2>
+<section id="slide-org3fc91de" data-background="./images/aspen-background.png">
+<h2 id="org3fc91de">The 'Screens'</h2>
 <ul>
 <li class="fragment fade-left">32" monitors embedded in walls and shelf ends</li>
 <li class="fragment fade-left">15 monitors at 5 branchs</li>
@@ -42,8 +53,8 @@ The hardware I am talking about today were actually all-in-one computers but for
 
 </aside>
 </section>
-<section id="slide-org31decfa" data-background="./images/aspen-background.png">
-<h3 id="org31decfa">The Problem</h3>
+<section id="slide-org028be91" data-background="./images/aspen-background.png">
+<h3 id="org028be91">The Problem</h3>
 <ul>
 <li class="fragment fade-left">Aloof administrators</li>
 <li class="fragment fade-left">Finicky software</li>
@@ -60,8 +71,8 @@ The hardware I am talking about today were actually all-in-one computers but for
 
 </aside>
 </section>
-<section id="slide-org91c2857" data-background="./images/aspen-background.png">
-<h3 id="org91c2857"><img src="./images/display-1.jpeg" alt="display-1.jpeg" /></h3>
+<section id="slide-orgf46de85" data-background="./images/aspen-background.png">
+<h3 id="orgf46de85"><img src="./images/display-1.jpeg" alt="display-1.jpeg" /></h3>
 <aside class="notes">
 <p>
 What we would often end up with was this: a screen with nothing on it.
@@ -77,8 +88,8 @@ So that's the problem. What's the solution?
 
 </aside>
 </section>
-<section id="slide-orgd270526" data-background="./images/aspen-background.png">
-<h3 id="orgd270526">The Solution</h3>
+<section id="slide-org0b2a90a" data-background="./images/aspen-background.png">
+<h3 id="org0b2a90a">The Solution</h3>
 <aside class="notes">
 <p>
 Aspen!
@@ -95,8 +106,8 @@ Specifically, Browse Categories
 
 </ul>
 </section>
-<section id="slide-org2dcdec1" data-background="./images/aspen-background.png">
-<h3 id="org2dcdec1"><img src="./images/displays-2.jpg" alt="displays-2.jpg" /></h3>
+<section id="slide-org71ee02e" data-background="./images/aspen-background.png">
+<h3 id="org71ee02e"><img src="./images/displays-2.jpg" alt="displays-2.jpg" /></h3>
 <aside class="notes">
 <p>
 This is what they look like now, embedded in the wall. This is directly across from our circulation desk at the Madison Branch.
@@ -114,8 +125,8 @@ This is what they look like now, embedded in the wall. This is directly across f
 </section>
 </section>
 <section>
-<section id="slide-orgecdd1af" data-background="./images/aspen-background.png">
-<h2 id="orgecdd1af">First steps</h2>
+<section id="slide-org32b20b0" data-background="./images/aspen-background.png">
+<h2 id="org32b20b0">First steps</h2>
 <ul>
 <li class="fragment fade-left">Full screen, locked down</li>
 <li class="fragment fade-left"><a href="https://www.kioware.com/">Kioware</a></li>
@@ -132,8 +143,8 @@ This is what they look like now, embedded in the wall. This is directly across f
 
 </aside>
 </section>
-<section id="slide-org74a47ab" data-background="./images/aspen-background.png">
-<h3 id="org74a47ab">First steps</h3>
+<section id="slide-org3e99e06" data-background="./images/aspen-background.png">
+<h3 id="org3e99e06">First steps</h3>
 <ul>
 <li class="fragment fade-left">Q: How to scope content to a specific branch?</li>
 <li class="fragment fade-left">A: Dummy locations for each location</li>
@@ -148,8 +159,8 @@ This is what they look like now, embedded in the wall. This is directly across f
 
 </aside>
 </section>
-<section id="slide-org1940c88" data-background="./images/aspen-background.png">
-<h3 id="org1940c88"></h3>
+<section id="slide-org6148c50" data-background="./images/aspen-background.png">
+<h3 id="org6148c50"></h3>
 
 <div class="figure">
 <p><img src="./images/display-locations.png" alt="display-locations.png" />
@@ -162,8 +173,8 @@ This is what it looks like in Aspen Admin GUI. In the Aspen Locations table ther
 
 </aside>
 </section>
-<section id="slide-orgc85206f" data-background="./images/aspen-background.png">
-<h3 id="orgc85206f">First steps</h3>
+<section id="slide-orgc6c8f1c" data-background="./images/aspen-background.png">
+<h3 id="orgc6c8f1c">First steps</h3>
 <ul>
 <li class="fragment fade-left">Q: How to scope content to a specific branch?</li>
 <li class="fragment fade-left">A: Browse Category Groups for each dummy Location</li>
@@ -178,8 +189,8 @@ This is what it looks like in Aspen Admin GUI. In the Aspen Locations table ther
 
 </aside>
 </section>
-<section id="slide-orge659b7e" data-background="./images/aspen-background.png">
-<h3 id="orge659b7e"></h3>
+<section id="slide-org943bbc1" data-background="./images/aspen-background.png">
+<h3 id="org943bbc1"></h3>
 
 <div class="figure">
 <p><img src="./images/browse-category-groups.png" alt="browse-category-groups.png" />
@@ -198,8 +209,8 @@ Those were the first steps. There was more to do.
 </section>
 </section>
 <section>
-<section id="slide-org595d973" data-background="./images/aspen-background.png">
-<h2 id="org595d973">Custom Theme/CSS</h2>
+<section id="slide-org9c1f95b" data-background="./images/aspen-background.png">
+<h2 id="org9c1f95b">Custom Theme/CSS</h2>
 <ul>
 <li class="fragment fade-left">Q: How to make it look great?</li>
 <li class="fragment fade-left">A: Jenny Ellis' beautiful, dark <a href="https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU">theme</a></li>
@@ -215,8 +226,8 @@ Those were the first steps. There was more to do.
 
 </aside>
 </section>
-<section id="slide-org9a27298" data-background="./images/aspen-background.png">
-<h3 id="org9a27298">Custom theme/CSS</h3>
+<section id="slide-org1a5ec32" data-background="./images/aspen-background.png">
+<h3 id="org1a5ec32">Custom theme/CSS</h3>
 <ul>
 <li class="fragment fade-left">Eliminates: arrows, mouse, alert bar, and scroll bar</li>
 <li class="fragment fade-left">Eliminates: language selector, search bar, logo</li>
@@ -236,8 +247,8 @@ So what's custom about it?
 
 </aside>
 </section>
-<section id="slide-org66ae7c8" data-background="./images/aspen-background.png">
-<h3 id="org66ae7c8">Remove mouse</h3>
+<section id="slide-orgb94efd0" data-background="./images/aspen-background.png">
+<h3 id="orgb94efd0">Remove mouse</h3>
 <div class="org-src-container">
 
 <pre  class="src src-css"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #cac89f;">================= GET RID OF POINTER ================= </span><span style="color: #545c5e;">*/</span>
@@ -254,8 +265,8 @@ This removes the mouse
 
 </aside>
 </section>
-<section id="slide-org0f3b2d9" data-background="./images/aspen-background.png">
-<h3 id="org0f3b2d9">Hide scrollbar</h3>
+<section id="slide-orgb81dd39" data-background="./images/aspen-background.png">
+<h3 id="orgb81dd39">Hide scrollbar</h3>
 <div class="org-src-container">
 
 <pre  class="src src-css"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #cac89f;">================= HIDE SCROLLBAR ================= </span><span style="color: #545c5e;">*/</span>
@@ -272,8 +283,8 @@ This removes the scroll bar
 
 </aside>
 </section>
-<section id="slide-org736cd75" data-background="./images/aspen-background.png">
-<h3 id="org736cd75">Set correct # of covers</h3>
+<section id="slide-orgcafc29d" data-background="./images/aspen-background.png">
+<h3 id="orgcafc29d">Set correct # of covers</h3>
 <div class="org-src-container">
 
 <pre  class="src src-css"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #cac89f;">================= HIDE BOTTOM ROW OF COVERS ================= </span><span style="color: #545c5e;">*/</span>
@@ -291,8 +302,8 @@ This sets the correct number of covers for our hardware. It's notable that all o
 
 </aside>
 </section>
-<section id="slide-orgda3593b" data-background="./images/aspen-background.png">
-<h3 id="orgda3593b">All of it</h3>
+<section id="slide-org7d33763" data-background="./images/aspen-background.png">
+<h3 id="org7d33763">All of it</h3>
 <div class="org-src-container">
 
 <pre  class="src src-css"   ><code trim><span style="color: #545c5e;">/* </span><span style="color: #cac89f;">================= GET RID OF POINTER ================= </span><span style="color: #545c5e;">*/</span>
@@ -483,8 +494,8 @@ And here's all of it, but it is also linked of the top slide, and Aspen Weekly i
 </section>
 </section>
 <section>
-<section id="slide-orgc762529" data-background="./images/aspen-background.png">
-<h2 id="orgc762529">Custom JavaScript</h2>
+<section id="slide-org6216b21" data-background="./images/aspen-background.png">
+<h2 id="org6216b21">Custom JavaScript</h2>
 <ul>
 <li class="fragment fade-left">Q: How to make Browse Categories automatically move</li>
 <li class="fragment fade-left">A: James Staub's <a href="https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU">custom JavaScript</a></li>
@@ -501,11 +512,11 @@ And here's all of it, but it is also linked of the top slide, and Aspen Weekly i
 
 </aside>
 </section>
-<section id="slide-org8867ad9" data-background="./images/aspen-background.png">
-<h3 id="org8867ad9">Move to next Category after X seconds</h3>
+<section id="slide-org9401fdf" data-background="./images/aspen-background.png">
+<h3 id="org9401fdf">Move to next Category after X seconds</h3>
 <div class="org-src-container">
 
-<pre  class="fragment (t)"   ><code trim><span style="color: #eba8a8; font-weight: bold;">if</span> (location.pathname == <span style="color: #50cf89;">'/'</span>) {
+<pre  class="src src-javascript"   ><code trim><span style="color: #eba8a8; font-weight: bold;">if</span> (location.pathname == <span style="color: #50cf89;">'/'</span>) {
         <span style="color: #eba8a8; font-weight: bold;">var</span> <span style="color: #f59acf;">reloadURL</span> = window.location.href;
         <span style="color: #eba8a8; font-weight: bold;">var</span> <span style="color: #f59acf;">rotateTime</span> = 20000;
         <span style="color: #eba8a8; font-weight: bold;">var</span> <span style="color: #f59acf;">rotateCount</span> = 0;
@@ -521,11 +532,11 @@ It's the fuction that is named but not known that makes it move.
 
 </aside>
 </section>
-<section id="slide-org250d681" data-background="./images/aspen-background.png">
-<h3 id="org250d681">Refresh after the last Category</h3>
+<section id="slide-orgbb04a48" data-background="./images/aspen-background.png">
+<h3 id="orgbb04a48">Refresh after the last Category</h3>
 <div class="org-src-container">
 
-<pre  class="fragment (t)"   ><code trim><span style="color: #eba8a8; font-weight: bold;">function</span> <span style="color: #7fca5a;">rotateCategory</span>() {
+<pre  class="src src-javascript"   ><code trim><span style="color: #eba8a8; font-weight: bold;">function</span> <span style="color: #7fca5a;">rotateCategory</span>() {
       <span style="color: #eba8a8; font-weight: bold;">var</span> <span style="color: #f59acf;">bccount</span> = $(<span style="color: #50cf89;">'.jcarousel'</span>).jcarousel(<span style="color: #50cf89;">'items'</span>).length;
       <span style="color: #eba8a8; font-weight: bold;">var</span> <span style="color: #f59acf;">nextCategory</span> = <span style="color: #cfaaff;">null</span>;          
       nextCategory = $(<span style="color: #50cf89;">'[data-category-id='</span>+AspenDiscovery.Browse.curCategory+<span style="color: #50cf89;">']'</span>).next().attr(<span style="color: #50cf89;">'data-category-id'</span>);
@@ -545,11 +556,11 @@ Full disclosure, I can barely explain what this does. More on that later.
 
 </aside>
 </section>
-<section id="slide-org8c2d318" data-background="./images/aspen-background.png">
-<h3 id="org8c2d318">All of it</h3>
+<section id="slide-org90ee3f4" data-background="./images/aspen-background.png">
+<h3 id="org90ee3f4">All of it</h3>
 <div class="org-src-container">
 
-<pre  class="fragment (t)"   ><code trim>&lt;script&gt;
+<pre  class="src src-javascript"   ><code trim>&lt;script&gt;
 
 <span style="color: #eba8a8; font-weight: bold;">if</span> (location.pathname == <span style="color: #50cf89;">'/'</span>) {
         <span style="color: #eba8a8; font-weight: bold;">var</span> <span style="color: #f59acf;">reloadURL</span> = window.location.href;
@@ -587,10 +598,10 @@ And here's all of it. At the end if you have questions, we can go over it.
 </section>
 </section>
 <section>
-<section id="slide-org459b7c5" data-background="./images/aspen-background.png">
-<h2 id="org459b7c5">Granular permissions</h2>
+<section id="slide-org7238225" data-background="./images/aspen-background.png">
+<h2 id="org7238225">Granular permissions</h2>
 <ul>
-<li>aka don't move my stapler</li>
+<li class="fragment fade-left">aka don't move my stapler</li>
 
 </ul>
 <aside class="notes">
@@ -600,8 +611,8 @@ We have a lot of Browse Categories at our library (probably too many). The Colle
 
 </aside>
 </section>
-<section id="slide-org0e568f4" data-background="./images/aspen-background.png">
-<h3 id="org0e568f4">Granular permissions</h3>
+<section id="slide-orgdb12abf" data-background="./images/aspen-background.png">
+<h3 id="orgdb12abf">Granular permissions</h3>
 
 <div class="figure">
 <p><img src="./images/stapler.png" alt="stapler.png" />
@@ -614,8 +625,8 @@ With the release of Aspen Discovery 23.06 we had the ability granularly assign p
 
 </aside>
 </section>
-<section id="slide-orgafbee99" data-background="./images/aspen-background.png">
-<h3 id="orgafbee99">Don't move my stapler</h3>
+<section id="slide-org9733383" data-background="./images/aspen-background.png">
+<h3 id="org9733383">Don't move my stapler</h3>
 
 <div class="figure">
 <p><img src="./images/granular-permissions.png" alt="granular-permissions.png" />
@@ -630,8 +641,8 @@ Here are the accounts that can edit the Madison-Display Browse Category Group. N
 </section>
 </section>
 <section>
-<section id="slide-org60f733a" data-background="./images/aspen-background.png">
-<h2 id="org60f733a">Staff Training</h2>
+<section id="slide-org6c028fa" data-background="./images/aspen-background.png">
+<h2 id="org6c028fa">Staff Training</h2>
 <ul>
 <li class="fragment fade-left">What's a 'Browse Category'?</li>
 <li class="fragment fade-left">instructional PDF, video calls</li>
@@ -661,8 +672,8 @@ N: Some staff are just poison-pilled on the topic of this hardware.
 </section>
 </section>
 <section>
-<section id="slide-org0840480" data-background="./images/aspen-background.png">
-<h2 id="org0840480">Future Steps</h2>
+<section id="slide-org188fb5e" data-background="./images/aspen-background.png">
+<h2 id="org188fb5e">Future Steps</h2>
 <ul>
 <li class="fragment fade-left">Info boxes</li>
 <li class="fragment fade-left">Interactive navigation</li>
@@ -683,8 +694,8 @@ N: Some staff are just poison-pilled on the topic of this hardware.
 </section>
 </section>
 <section>
-<section id="slide-org8837269" data-background="./images/aspen-background.png">
-<h2 id="org8837269">Takeaways</h2>
+<section id="slide-orge2eb0f0" data-background="./images/aspen-background.png">
+<h2 id="orge2eb0f0">Takeaways</h2>
 <ul>
 <li class="fragment fade-left">Follow procedures</li>
 <li class="fragment fade-left">Learn to code*</li>
@@ -710,8 +721,8 @@ If we worked fast this could have taken two-weeks, more realistically two months
 </section>
 </section>
 <section>
-<section id="slide-org2eebda4" data-background="./images/aspen-background.png">
-<h2 id="org2eebda4">All the Things in All the Places</h2>
+<section id="slide-orgd625167" data-background="./images/aspen-background.png">
+<h2 id="orgd625167">All the Things in All the Places</h2>
 <ul>
 <li><a href="https://bld.library.nashville.org">Bellevue</a></li>
 <li><a href="https://bxd.library.nashville.org">Bordeaux</a></li>
