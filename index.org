@@ -94,7 +94,7 @@ This is what it looks like in Aspen Admin GUI.
 
 Those were the first steps. There was more to do.
 #+END_NOTES
-* Custom Theme/CSS 
+* Custom Theme / CSS 
 #+ATTR_REVEAL: :frag (t)
 - Q: How to make it look great?
 - A: Jenny Ellis' beautiful, dark [[https://docs.google.com/document/d/1M-mUy-G2Y8oI_AnwW4u9DrWyOyr3yBDmBRh4BaM9jnU][theme]]
@@ -103,7 +103,7 @@ Those were the first steps. There was more to do.
 2) Jenny Ellis' beautiful, dark theme
 3) Let's dig into it a little bit
 #+END_NOTES
-** Custom theme/CSS 
+** Custom theme / CSS 
 #+ATTR_REVEAL: :frag (t)
 + Eliminates: arrows, mouse, alert bar, and scroll bar
 + Eliminates: language selector, search bar, logo
