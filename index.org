@@ -13,7 +13,7 @@
  #+ATTR_REVEAL: :frag (t)
  * 32" monitors embedded in walls and shelf ends   
  * 15 monitors at 5 branchs
- * Displayed Aspen Lists created by staff
+ * Third party software displayed Aspen Lists created by staff
 #+BEGIN_NOTES
 The hardware I am talking about today were actually all-in-one computers but for convience, I will refer to them as the 'screens'
 1) 32" portrait-oriented, all-in-one computers, embedded in walls and shelf ends.
@@ -26,7 +26,7 @@ The hardware I am talking about today were actually all-in-one computers but for
  * Finicky software
  * Broken workflows
 #+BEGIN_NOTES
-1) An administrator that no longer works at my library, subverted protocol and made a business relationship with a local avertising company. Because our normal procedures for on boarding new technology wasn't followed, chaos ensured.
+1) An administrator that no longer works at my library, subverted protocol and made a business relationship with a local avertising company. Because our normal procedures for onboarding new technology were not followed, chaos ensured.
 2) This advertising company developed a bepoke content management system to serve content to the screens. The method they had created to pulled data from Aspen, was not stable.
 3) There was perpetual confusion as to who was responsible for what. In short, their software stack was fragile, and whose responsibility it was to fix it was nebulous. And staff were very frustrated. 
  #+END_NOTES
@@ -408,7 +408,8 @@ And here's all of it. At the end if you have questions, we can go over it.
 #+ATTR_REVEAL: :frag (t)
 - aka don't move my stapler
 #+BEGIN_NOTES
-We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally. We didn't want anyone moving our stapler.
+We have a lot of Browse Categories at our library (probably too many). The Collections + Technology team manages the system-wide Browse Category Groups centrally.
+1) We didn't want anyone moving our stapler.
 #+END_NOTES
 ** Granular permissions
 [[./images/stapler.png]]
@@ -474,3 +475,4 @@ Bringing it back home, I was the project manager. If the project was difficult t
 #+BEGIN_NOTES
 
 #+END_NOTES  
+
